@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultacje par - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ofertas_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html" class="active">OFERTA</a></li>
+                <li><a href="omnie.html">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="Par.png" alt="Konsultacje par" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1>Konsultacje par</h1>
+            <p>W Twoim związku pojawiły się trudności, z którymi nie możecie sobie poradzić sami? Zastanawiacie się nad terapią par, ale nie wiecie, czego się spodziewać? To dobry moment, aby na drodze do budowania silnej i satysfakcjonującej relacji skorzystać z profesjonalnego wsparcia psychologicznego. Konsultacje psychologiczne dla par to skuteczna metoda pomocy w pokonywaniu kryzysów i trudności w relacji, a także w rozwijaniu jego potencjału. Sesje terapeutyczne są skoncentrowane na wzmacnianiu więzi i znajdowaniu konstruktywnych rozwiązań dla wspólnych wyzwań.</p>
+            <p>Efekty konsultacji psychologicznych dla par:</p>
+            <ul>
+                <li>Poprawa komunikacji i umiejętności rozwiązywania konfliktów.</li>
+                <li>Wzrost wzajemnego zaufania i poczucia bliskości.</li>
+                <li>Zmniejszenie poziomu stresu i napięcia w związku.</li>
+                <li>Większa satysfakcja z relacji.</li>
+                <li>Nauka nowych umiejętności radzenia sobie z wyzwaniami.</li>
+                <li>Zwiększenie szans na utrzymanie związku w obliczu kryzysów.</li>
+            </ul>
+            <p>Zapraszamy pary na każdym etapie związku:</p>
+            <ul>
+                <li>Które przeżywają kryzys i rozważają rozstanie.</li>
+                <li>Chcące poprawić komunikację i rozwiązywać konflikty w konstruktywny sposób.</li>
+                <li>Pragnące rozwijać swoją relację i budować silniejszy związek.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

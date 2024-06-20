@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terapia DDA / DDD - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ofertas_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html" class="active">OFERTA</a></li>
+                <li><a href="omnie.html">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="DDA.png" alt="Terapia DDA / DDD" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1>Terapia DDA / DDD</h1>
+            <p>Dorastanie w dysfunkcyjnej rodzinie pozostawia trwałe ślady na psychice i emocjach człowieka, powoduje długotrwały negatywny wpływ na jego funkcjonowanie w życiu dorosłym. Osoby, które doświadczyły zaniedbania, nadużyć lub przemocy w dzieciństwie, często zmagają się z zespołem DDA (Dorosłych Dzieci Alkoholików) lub zespołem DDD (Dorosłych Dzieci z Dysfunkcyjnych Rodzin). Oznacza to, że w dorosłym życiu borykają się z wieloma problemami, takimi jak:</p>
+            <ul>
+                <li>Niska samoocena i poczucie niższości</li>
+                <li>Trudności z budowaniem zdrowych relacji</li>
+                <li>Współuzależnienie</li>
+                <li>Problemy z komunikacją</li>
+                <li>Lęk i depresja</li>
+                <li>Zaburzenia psychosomatyczne</li>
+            </ul>
+            <p>Terapia DDA i DDD zwykle trwa od kilku miesięcy do kilku lat. Spotkania odbywają się raz lub dwa razy w tygodniu. Podczas terapii pacjent pracuje z psychologiem nad zrozumieniem swoich doświadczeń i ich wpływu na obecne życie. Uczy się również nowych sposobów myślenia i zachowania, które pozwalają mu radzić sobie z trudnościami i budować satysfakcjonujące relacje.</p>
+            <p>Terapia DDA i DDD może przynieść wiele korzyści, m.in.:</p>
+            <ul>
+                <li>Uzdrawianie z przeszłości i przepracowanie traumatycznych doświadczeń</li>
+                <li>Zbudowanie zdrowej samooceny i poczucia własnej wartości</li>
+                <li>Nauka radzenia sobie z trudnymi emocjami</li>
+                <li>Rozwijanie umiejętności budowania zdrowych relacji</li>
+                <li>Przełamanie schematów wyniesionych z domu rodzinnego</li>
+                <li>Poprawa jakości życia</li>
+            </ul>
+            <p>Jeśli borykasz się z problemami DDA lub DDD, nie wahaj się szukać pomocy. Terapia jest drogą do uzdrowienia i budowania szczęśliwszego życia.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

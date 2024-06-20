@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mnie - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_omnie.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html">OFERTA</a></li>
+                <li><a href="omnie.html" class="active">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="magdalena.jpg" alt="Magdalena Surya Zawadzka" class="hero-image">
+        <div class="hero-text">
+            <h2>Magdalena Surya Zawadzka</h2>
+            <p>psycholog - psychoterapeutka - psychoanalityk</p>
+            <p>Absolwentka uniwersyteckiej psychologii. Ukończyła podyplomowe 4-letnie szkolenie z psychoanalitycznie zorientowanej psychoterapii indywidualnej i grupowej, atestowane przez Polskie Towarzystwo Psychologiczne i Polskie Towarzystwo Psychiatryczne, w Instytucie Analizy Grupowej "Rasztów" (akredytowanym przez EGATIN i EFPP). Posiada wieloletnie doświadczenie terapeutyczne. Pracuje z osobami dorosłymi, także w języku angielskim. Dzięki wiedzy, bogatemu doświadczeniu, umiejętnościom analitycznym i interpersonalnym, przede wszystkim jednak przez holistyczne podejście do człowieka, skutecznie od lat wspiera innych w rozwoju. Opracowała autorską holistyczną metodę terapeutyczną Holistic Healing. Prowadziła warsztaty z obszaru psychologii, medytacji, świadomej pracy z ciałem i oddechem. Doświadczona w współpracy z sektorem biznesowym. Gości w programach telewizyjnych, radiowych, podcastach, gdzie poza wystąpieniami jako ekspert, także konsultuje merytorycznie.</p>
+            <p><strong>PSYCHOLISTICA to gwarancja profesjonalizmu, poufności, empatii i holistycznego podejścia do każdego człowieka.</strong></p>
+            <ul>
+                <li>Przytulny gabinet w warszawskiej Falenicy.</li>
+                <li>Sesje stacjonarne oraz online.</li>
+                <li>Sesje w języku angielskim.</li>
+                <li>Elastyczne terminy.</li>
+            </ul>
+            <p>Zapraszam w drogę do lepszego zrozumienia siebie, odnalezienia harmonii i poprawy jakości życia.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

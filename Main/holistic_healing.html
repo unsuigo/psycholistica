@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holistic Healing - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ofertas_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html" class="active">OFERTA</a></li>
+                <li><a href="omnie.html">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="HH.png" alt="Holistic Healing" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1>Holistic Healing</h1>
+            <p>Odkryj harmonię ciała i ducha razem z Suryą i jej autorską metodą Holistic Healing.</p>
+            <p>Współczesne badania naukowe coraz częściej potwierdzają znaczenie holistycznego, czyli łączącego stan ciała i umysłu, podejścia do zdrowia i dobrostanu człowieka. Badania wykazały, że nasze myśli i emocje mają znaczący wpływ na nasze zdrowie fizyczne. Holistic Healing to autorska holistyczna metoda wypracowana przez Suryę w ciągu kilkunastoletniej praktyki. Każda sesja przebiega inaczej i jest całkowicie dostosowana do potrzeb Klienta. Jedyne, co musi zadbać Klient to otwarty umysł i serce. Terapeuta łączy różne nurty i techniki terapeutyczne, aby wspomóc pacjentów w rozpoznaniu i uwolnieniu schematów myślowych, które im już nie służą i wskazują nowy kierunek ku lepszej jakości życia. Holistic Healing łączy elementy biomeroterapii, harmonizacji czakr, uwalniania napięć z ciała i umysłu, wglądu mentalnego i odczytu z pola oraz psychoanalizy, aby umożliwić pacjentowi poprawę stanu na wszystkich poziomach: fizycznym, emocjonalnym, mentalnym i duchowym. Jedna sesja Holistic Healing pomaga osiągnąć głębsze zrozumienie miejsca i stanu w jakim aktualnie jesteś. Otrzymasz zintegrowaną interpretację materiału, który pojawi się na sesji.</p>
+            <p>Co możesz zyskać dzięki jednej sesji Holistic Healing:</p>
+            <ul>
+                <li>Poprawa samopoczucia fizycznego i psychicznego.</li>
+                <li>Poprawa jakości snu.</li>
+                <li>Harmonizacja czakr - namierzenie i usunięcie blokad energetycznych w ciele, wprowadzenie równowagi.</li>
+                <li>Uwolnienie napięcia z ciała i umysłu. Głęboki relaks.</li>
+                <li>Redukcja stresu, niepokoju, smutku, poczucia wyobcowania.</li>
+                <li>Wgląd (możliwy regres) w mechanizmy, nieświadome wzorce myślowe i emocjonalne. Ocenimy, czy są one dla Ciebie pomocne, czy są szkodliwe i mogą przyczyniać się do aktualnych problemów.</li>
+                <li>Lepiej zrozumiesz swoje obecne wyzwania, możesz odkryć swój prawdziwy potencjał.</li>
+                <li>Wzmocnisz poczucie świadomości siebie, własnej wartości i swoich potrzeb.</li>
+                <li>Umocnisz więź z samym sobą, swoimi ciałem i otaczającym Cię Światem.</li>
+            </ul>
+            <p>Holistyczne metody terapii są coraz bardziej popularne i zyskują uznanie zarówno wśród pacjentów, jak i naukowców. Jeśli szukasz holistycznego podejścia do zdrowia i chcesz poprawić swoje samopoczucie na wszystkich poziomach, Holistic Healing może być dla Ciebie odpowiednią metodą. Holistic Healing to podróż do głębokiego samozpoznania i odkrycia tego, co dla ciała najlepsze. Jeśli gotowy zajrzeć za kurtynę? Nie oczekuj nic, doświadcz.</p>
+            <p>Uwaga:</p>
+            <ul>
+                <li>Pamiętaj, że żadna metoda holistyczna nie jest substytutem dla tradycyjnej medycyny. Jeśli masz jakiekolwiek problemy zdrowotne, skonsultuj się z lekarzem.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

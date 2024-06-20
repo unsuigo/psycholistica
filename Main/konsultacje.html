@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultacje psychologiczne - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ofertas_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html" class="active">OFERTA</a></li>
+                <li><a href="omnie.html">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="Konsul.png" alt="Konsultacje psychologiczne" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1>Konsultacje psychologiczne</h1>
+            <p>Codzienne wyzwania i natłok emocji mogą być nadmiernie przytłaczające. Może stoisz przed trudnym wyborem, masz w głowie chaos albo problem, z którym nie możesz sobie sam poradzić. Dobrym rozwiązaniem będzie skorzystanie z profesjonalnego wsparcia psychologicznego.</p>
+            <p>Gabinet psychologa jest poufną i bezpieczną przestrzenią, w której możesz być sobą bez osądów. Psycholog wysłucha Cię z empatią, pomoże zapanować nad chaosem myśli i uczuć, zrozumieć Twoje problemy, znaleźć sposoby na ich rozwiązanie. Nie będzie Ci mówić, co masz robić, ale za pomocą fachowych wskazówek pomoże Ci odkryć własne rozwiązania i zasoby. Dostosowane do indywidualnych potrzeb sesje pomagają w zrozumieniu siebie, poprawiają samopoczucie i poczucie własnej wartości, wzmacniają zdrowie psychiczne, a w dalszej perspektywie ulepszają jakość życia. Pamiętaj, że z czymkolwiek się zmagasz nie musisz przechodzić przez to sam.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

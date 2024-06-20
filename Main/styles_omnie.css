@@ -1,0 +1,168 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333; /* Темно-серый цвет текста */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%; /* Увеличим отступы для перемещения навигации вправо */
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    max-height: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    flex: 2;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333; /* Темно-серый цвет текста */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем содержимое */
+    flex: 1;
+    padding: 0 15%; /* Увеличим отступы */
+    position: relative;
+}
+
+.hero-text {
+    max-width: 60%;
+    text-align: left;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px; /* Меньше, чем на главной странице */
+    margin-left: 5%; /* Добавляем отступ слева */
+}
+
+.hero-image {
+    max-width: 25%; /* Уменьшаем размер */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    text-align: left;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    padding-left: 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-right: 15%; /* Увеличим отступы */
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons a img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin: 20px 0;
+        position: static;
+        transform: none;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        font-size: 1em;
+        margin-top: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .container {
+        padding-left: 0;
+    }
+}

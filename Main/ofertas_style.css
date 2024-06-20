@@ -1,0 +1,173 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333; /* Темно-серый цвет текста */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 15%;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    max-height: 100px; /* Уменьшаем высоту логотипа */
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    flex: 2;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0; /* Увеличиваем отступ сверху и снизу */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333; /* Темно-серый цвет текста */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 15%; /* Увеличиваем отступы */
+    position: relative;
+    flex: 1;
+}
+
+.hero-text {
+    max-width: 60%;
+    text-align: left;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 18px; /* Меньше, чем на главной странице */
+    margin-left: 5%; /* Добавляем отступ слева */
+}
+
+.hero-text h1 {
+    font-size: 2em; /* Увеличиваем размер заголовка в 2 раза */
+}
+
+.hero-image-container {
+    max-width: 35%; /* Увеличиваем размер */
+    /* Убираем тень */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 0; /* Уменьшаем высоту футера */
+    text-align: left;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    padding-left: 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-right: 15%;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons a img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+        margin: 20px 0;
+        position: static;
+        transform: none;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        font-size: 1em;
+        margin-top: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .container {
+        padding-left: 0;
+    }
+}

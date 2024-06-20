@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interwencja kryzysowa - PSYCHOLISTICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ofertas_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="oferta.html" class="active">OFERTA</a></li>
+                <li><a href="omnie.html">O MNIE</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+            <img src="Inter.png" alt="Interwencja kryzysowa" class="hero-image">
+        </div>
+        <div class="hero-text">
+            <h1>Interwencja kryzysowa</h1>
+            <p>Interwencja kryzysowa to natychmiastowa pomoc psychologiczna w sytuacjach nagłych. To forma krótkoterminowego wsparcia psychologicznego skoncentrowana na problemie, ukierunkowana na łagodzenie ostrej reakcji psychicznej, wywołanej przez gwałtowne, traumatyczne wydarzenie lub trudną sytuację życiową. Celem interwencji jest przywrócenie równowagi psychicznej Klienta, zwiększenie jego zdolności radzenia sobie z kryzysem oraz wypracowanie planu dalszego postępowania.</p>
+            <p>Kiedy warto skorzystać z interwencji kryzysowej?</p>
+            <ul>
+                <li>W przypadku nagłych i traumatycznych wydarzeń, takich jak: katastrofy naturalne, wypadki, akty przemocy, zamachy terrorystyczne, nagła śmierć bliskiej osoby, utrata pracy, rozwód, zaostrzony konflikt, itp.</li>
+                <li>Podczas szczególnie nasilonych objawów stresu, napięcia, smutku, gniewu, bezradności, poczucia utraty kontroli nad życiem w stopniu uniemożliwiającym normalne funkcjonowanie.</li>
+            </ul>
+            <p>Interwencja kryzysowa może pomóc Ci w:</p>
+            <ul>
+                <li>Złagodzeniu objawów stresu, niepokoju i innych trudnych emocji</li>
+                <li>Odzyskaniu równowagi psychicznej i kontroli nad swoim życiem</li>
+                <li>Aktywizacji zasobów osobistych i znalezieniu siły do radzenia sobie z wyzwaniami</li>
+                <li>Zapobieganiu dalszym negatywnym konsekwencjom kryzysu</li>
+                <li>Podjęciu decyzji o dalszej pomocy psychologicznej lub psychoterapeutycznej</li>
+            </ul>
+            <p>Pamiętaj!</p>
+            <ul>
+                <li>Nie musisz przechodzić przez ten kryzys sam/a.</li>
+                <li>Profesjonalna pomoc psychologiczna jest w zasięgu Twojej ręki.</li>
+                <li>Im szybciej zgłosisz się po pomoc, tym szybciej poczujesz się lepiej.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook Logo"></a></li>
+                <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="Instagram_Logo_Primary.png" alt="Instagram Logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('nav ul li a');
+            var currentPath = window.location.pathname.split("/").pop();
+
+            links.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+
+                link.addEventListener('click', function() {
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
