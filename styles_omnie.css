@@ -1,9 +1,9 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #333; /* Темно-серый цвет текста */
+    color: #6B4C4C; /* Цвет горького шоколада */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15%; /* Увеличим отступы для перемещения навигации вправо */
+    padding: 20px 15%;
     background-color: #fff;
     position: sticky;
     top: 0;
@@ -48,46 +48,45 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333; /* Темно-серый цвет текста */
+    color: #A9A9A9; /* Теплый серый цвет */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #ff6347;
+    color: #FF8C00; /* Цвет активной вкладки */
     font-weight: bold;
 }
 
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрируем содержимое */
+    justify-content: center;
     flex: 1;
-    padding: 0 15%; /* Увеличим отступы */
+    padding: 0 15%;
     position: relative;
 }
 
 .hero-text {
     max-width: 60%;
-    text-align: left;
-    font-family: 'Oxygen', sans-serif;
-    font-size: 18px; /* Меньше, чем на главной странице */
-    margin-left: 5%; /* Добавляем отступ слева */
+    text-align: justify; /* Выровнять текст по обеим сторонам */
+    font-size: 18px;
+    margin-left: 5%;
+    color: #6B4C4C; /* Цвет горького шоколада */
 }
 
 .hero-image {
-    max-width: 25%; /* Уменьшаем размер */
+    max-width: 25%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -50px; /* Поднято вверх, чтобы совместить с первой линией текста */
 }
 
 footer {
     background-color: #fff;
-    color: #333;
+    color: #6B4C4C; /* Цвет горького шоколада */
     padding: 20px 0;
     text-align: left;
     position: sticky;
@@ -106,7 +105,7 @@ footer {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
-    padding-right: 15%; /* Увеличим отступы */
+    padding-right: 15%;
 }
 
 .social-icons li {
@@ -156,6 +155,7 @@ footer {
         max-width: 100%;
         font-size: 1em;
         margin-top: 0;
+        text-align: justify; /* Выровнять текст по обеим сторонам */
     }
 
     .social-icons {
