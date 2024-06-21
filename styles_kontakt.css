@@ -1,9 +1,9 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #333; /* Темно-серый цвет текста */
+    color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15%; /* Отступы для выравнивания */
+    padding: 20px 15%;
     background-color: #fff;
     position: sticky;
     top: 0;
@@ -48,14 +48,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333; /* Темно-серый цвет текста */
+    color: #333;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #ff6347;
+    color: #FF8C00; /* Цвет солнца в логотипе */
     font-weight: bold;
 }
 
@@ -76,6 +76,7 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: 'Jost', sans-serif;
 }
 
 .contact-form input, .contact-form textarea {
@@ -84,11 +85,12 @@ nav ul li a:hover, nav ul li a.active {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Jost', sans-serif;
 }
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #ff6347;
+    background-color: #FF8C00; /* Цвет активной вкладки */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -97,21 +99,21 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .contact-form button:hover {
-    background-color: #e5533d;
+    background-color: #e67300; /* Темный оттенок цвета активной вкладки */
 }
 
 .social-media {
-    text-align: center;
+    text-align: right;
     padding: 20px 0;
 }
 
 .social-icons {
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
     margin: 0;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start; /* Иконки влево */
 }
 
 .social-icons li {
@@ -119,8 +121,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .social-icons a img {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     transition: transform 0.3s;
 }
 
