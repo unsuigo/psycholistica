@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    color: #6B4C4C; /* Цвет горького шоколада */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -48,14 +49,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #A9A9A9; /* Теплый серый цвет */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #ff6347;
+    color: #FF8C00; /* Цвет активной вкладки */
     font-weight: bold;
 }
 
@@ -91,10 +92,16 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 24px; /* Размер шрифта для текста в blockquote */
 }
 
-.hero-text blockquote footer {
-    text-align: right; /* Выравнивание для имени автора */
-    font-size: 18px; /* Размер шрифта для имени автора */
-    margin-top: 10px; /* Отступ сверху для имени автора */
+.hero-text blockquote p.quote {
+    font-style: italic; /* Наклонный текст */
+}
+
+.hero-text blockquote p .author {
+    font-family: 'Dancing Script', cursive; /* Рукописный шрифт для автора */
+    font-size: 1.2em; /* Увеличенный размер шрифта для автора */
+    display: block;
+    text-align: right; /* Выравнивание по правому краю */
+    margin-top: 10px; /* Отступ сверху для автора */
 }
 
 footer {
