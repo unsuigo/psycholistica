@@ -1,9 +1,9 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #6B4C4C; /* Цвет горького шоколада */
+    color: #817168; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ header {
     align-items: center;
     padding: 50px 5%;
     background-color: #fff;
-    height: 50px; /* Уменьшаем высоту хедера */
+    height: 10px; /* Уменьшаем высоту хедера */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -26,7 +26,7 @@ header {
 }
 
 .logo {
-    max-height: 250px; /* Увеличиваем логотип в 5 раз от исходного размера */
+    max-height: 150px; /* Увеличиваем логотип в 5 раз от исходного размера */
     position: relative;
     z-index: 2;
 }
@@ -49,15 +49,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #A9A9A9; /* Теплый серый цвет */
+    color: #817168; /* Теплый серый цвет */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    font-family: 'Jost', sans-serif;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #FF8C00; /* Цвет активной вкладки */
-    font-weight: bold;
 }
 
 .hero {
@@ -72,7 +72,7 @@ nav ul li a:hover, nav ul li a.active {
 .hero-text {
     max-width: 50%;
     text-align: left;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-size: 28px;
     margin: 50px;
 }
@@ -100,7 +100,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Dancing Script', cursive; /* Рукописный шрифт для автора */
     font-size: 1.2em; /* Увеличенный размер шрифта для автора */
     display: block;
-    text-align: right; /* Выравнивание по правому краю */
+    text-align: left; /* Выравнивание по правому краю */
     margin-top: 10px; /* Отступ сверху для автора */
 }
 
