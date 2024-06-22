@@ -1,9 +1,9 @@
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost';
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #6B4C4C; /* Цвет горького шоколада */
+    color: #817168; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;

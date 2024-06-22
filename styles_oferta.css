@@ -1,9 +1,9 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost';
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #333; /* Темно-серый цвет текста */
+    color: #817168; /* Темно-серый цвет текста */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
