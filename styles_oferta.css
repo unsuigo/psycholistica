@@ -74,6 +74,8 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center; /* Центрируем содержимое */
     position: relative; /* Добавлено для центрирования изображения */
+    text-decoration: none; /* Убираем подчеркивание для ссылок */
+    color: inherit; /* Наследуем цвет текста */
 }
 
 .grid-item .grid-image {
@@ -84,6 +86,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .grid-item h2 {
+    font-size: 1.4em; /* Примерное значение, уменьшенное на 30% */
     margin: 10px 0; /* Отступ снизу для заголовков */
 }
 
@@ -91,20 +94,8 @@ nav ul li a:hover, nav ul li a.active {
     margin: 0 0 20px 0;
 }
 
-.grid-item .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.grid-item .btn:hover {
-    background-color: #e5533d;
+.grid-item .dots {
+    font-size: 2em; /* Увеличиваем размер шрифта в 3 раза */
 }
 
 footer {
