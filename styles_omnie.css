@@ -1,5 +1,5 @@
 body {
-    font-family: 'Jost';
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -48,16 +48,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #A9A9A9; /* Теплый серый цвет */
+    color: #A9A9A9; /* Темно-серый цвет */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-	font-family: 'Jost', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #FF8C00; /* Цвет активной вкладки */
-    
 }
 
 .hero {
@@ -74,7 +73,7 @@ nav ul li a:hover, nav ul li a.active {
     text-align: justify; /* Выровнять текст по обеим сторонам */
     font-size: 18px;
     margin-left: 5%;
-    color: #6B4C4C; /* Цвет горького шоколада */
+    color: #817168; /* Цвет текста */
 }
 
 .hero-image {
@@ -83,6 +82,11 @@ nav ul li a:hover, nav ul li a.active {
     position: relative;
     left: 0;
     top: -50px; /* Поднято вверх, чтобы совместить с первой линией текста */
+}
+
+.hero-text h1 {
+    font-size: 1.4em; /* Уменьшено на 30% */
+    color: #817168; /* Цвет текста */
 }
 
 footer {
