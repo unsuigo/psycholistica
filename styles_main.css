@@ -73,7 +73,7 @@ nav ul li a:hover, nav ul li a.active {
     max-width: 50%;
     text-align: left;
     font-family: 'Jost', sans-serif;
-    font-size: 28px;
+    font-size: 14px;
     margin: 50px;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .hero-text blockquote {
     margin: 20px 0;
-    font-size: 24px; /* Размер шрифта для текста в blockquote */
+    font-size: 18px; /* Размер шрифта для текста в blockquote */
 }
 
 .hero-text blockquote p.quote {
