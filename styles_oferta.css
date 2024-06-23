@@ -1,9 +1,9 @@
 body {
-    font-family: 'Jost';
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #817168; /* Темно-серый цвет текста */
+    color: #817168; /* Цвет текста */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,7 @@ nav ul li a:hover, nav ul li a.active {
 .grid-item h2 {
     font-size: 1.4em; /* Примерное значение, уменьшенное на 30% */
     margin: 10px 0; /* Отступ снизу для заголовков */
+    color: #817168; /* Цвет текста */
 }
 
 .grid-item p {
@@ -95,7 +96,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .grid-item .dots {
-    font-size: 2em; /* Увеличиваем размер шрифта в 3 раза */
+    font-size: 3em; /* Увеличиваем размер шрифта в 3 раза */
 }
 
 footer {
