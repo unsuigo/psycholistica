@@ -1,3 +1,5 @@
+/* Updated styles_oferta.css */
+
 body {
     font-family: 'Jost', sans-serif;
     margin: 0;
@@ -11,11 +13,12 @@ body {
 
 header {
     display: flex;
+    max-height: 45px; /* Reduced height by 50% */
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     position: sticky;
-    top: 0;
+    top: 10;
     z-index: 1000;
 }
 
@@ -24,7 +27,7 @@ header {
 }
 
 .logo {
-    max-height: 100px; /* Уменьшаем высоту логотипа */
+    max-height: 95px; /* Adjust to fit within the new header height */
     position: relative;
     z-index: 2;
 }
@@ -38,8 +41,8 @@ nav ul {
     padding: 0;
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 20px 0; /* Увеличиваем отступ сверху и снизу */
+    gap: 15px; /* Adjusted gap */
+    margin: 10px 0; /* Adjusted margin */
 }
 
 nav ul li {
@@ -51,12 +54,11 @@ nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-	font-family: 'Jost', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #FF8C00;
-    
 }
 
 .grid-container {
