@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: 'Jost', sans-serif;
     margin: 0;
@@ -13,9 +14,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5%;
+    padding: 50px 5%; /* Оригинальный padding для ландшафтного режима */
     background-color: #fff;
-    height: 10px; /* Уменьшаем высоту хедера */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -23,17 +23,18 @@ header {
 
 .logo-container {
     flex: 1;
+    text-align: left; /* Возвращаем логотип влево */
 }
 
 .logo {
-    max-height: 150px; /* Увеличиваем логотип в 5 раз от исходного размера */
+    max-height: 150px;
     position: relative;
     z-index: 2;
 }
 
 nav {
     flex: 2;
-    text-align: right;
+    text-align: right; /* Возвращаем вкладки вправо */
 }
 
 nav ul {
@@ -49,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #817168; /* Теплый серый цвет */
+    color: #817168;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -57,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #FF8C00; /* Цвет активной вкладки */
+    color: #FF8C00;
 }
 
 .hero {
@@ -84,44 +85,63 @@ nav ul li a:hover, nav ul li a.active {
     position: absolute;
     top: 50%;
     right: 10%;
-    transform: translateY(-50%) scale(1.2); /* Центрируем по вертикали и увеличиваем */
+    transform: translateY(-50%) scale(1.2);
 }
 
 .hero-text blockquote {
     margin: 20px 0;
-    font-size: 18px; /* Размер шрифта для текста в blockquote */
+    font-size: 18px;
 }
 
 .hero-text blockquote p.quote {
-    font-style: italic; /* Наклонный текст */
+    font-style: italic;
 }
 
 .hero-text blockquote p .author {
-    font-family: 'Dancing Script', cursive; /* Рукописный шрифт для автора */
-    font-size: 1.2em; /* Увеличенный размер шрифта для автора */
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
     display: block;
-    text-align: left; /* Выравнивание по правому краю */
-    margin-top: 10px; /* Отступ сверху для автора */
+    text-align: left;
+    margin-top: 10px;
 }
 
 footer {
-    margin-top: 1cm; /* Отступ сверху для футера */
+    margin-top: 1cm;
 }
 
+/* Медиа-запросы для портретного режима */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 0; /* Убираем padding */
+        height: 100px; /* Явная высота хедера */
+        justify-content: flex-start; /* Выравниваем элементы по верхнему краю */
     }
 
     .logo-container {
-        margin-bottom: 10px;
+        margin: 0; /* Убираем отступ */
+        text-align: center;
+       
+    }
+
+    .logo {
+        max-height: 100px; /* Максимальная высота логотипа */
+        margin: 0; /* Убираем отступ */
+    }
+
+    nav {
+        text-align: center;
+        margin: 0; /* Убираем отступ */
+		margin-top: -30px;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         gap: 10px;
+        margin: 0; /* Убираем отступ сверху */
+        padding-top: 0; /* Убираем padding сверху */
     }
 
     .hero {
@@ -133,21 +153,20 @@ footer {
     .hero-image {
         max-width: 100%;
         margin: 20px 0;
-        transform: scale(1.2);
-        position: static;
+        transform: translate(-50%, -50%) scale(1.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 
     .hero-text {
         max-width: 100%;
         font-size: 1em;
         margin-top: 0;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .container {
-        padding-left: 0;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
     }
 }
