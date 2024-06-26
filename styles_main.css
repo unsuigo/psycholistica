@@ -127,7 +127,7 @@ footer {
 
     .logo {
         max-height: 100px; /* Максимальная высота логотипа */
-        margin: 0; /* Убираем отступ */
+        margin: 0; 
     }
 
     nav {
@@ -139,7 +139,7 @@ footer {
     nav ul {
         flex-direction: row;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
         margin: 0; /* Убираем отступ сверху */
         padding-top: 0; /* Убираем padding сверху */
     }
@@ -160,7 +160,7 @@ footer {
     }
 
     .hero-text {
-        max-width: 100%;
+        max-width: 150%;
         font-size: 1em;
         margin-top: 0;
         position: absolute;
