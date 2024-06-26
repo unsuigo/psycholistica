@@ -14,9 +14,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5%;
+    padding: 50px 5%; /* Оригинальный padding для ландшафтного режима */
     background-color: #fff;
-    height: 10px; /* Уменьшаем высоту хедера */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -24,17 +23,18 @@ header {
 
 .logo-container {
     flex: 1;
+    text-align: left; /* Возвращаем логотип влево */
 }
 
 .logo {
-    max-height: 150px; /* Увеличиваем логотип в 5 раз от исходного размера */
+    max-height: 150px;
     position: relative;
     z-index: 2;
 }
 
 nav {
     flex: 2;
-    text-align: right;
+    text-align: right; /* Возвращаем вкладки вправо */
 }
 
 nav ul {
@@ -101,6 +101,9 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Dancing Script', cursive;
     font-size: 1.2em;
     display: block;
+    text-align: left;
+    margin-top: 10px;
+
 }
 
 footer {
@@ -112,18 +115,35 @@ footer {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 0; /* Убираем padding */
+        height: 100px; /* Явная высота хедера */
+        justify-content: flex-start; /* Выравниваем элементы по верхнему краю */
     }
 
     .logo-container {
-        margin-bottom: 10px;
+        margin: 0; /* Убираем отступ */
         text-align: center;
+       
+    }
+
+    .logo {
+        max-height: 100px; /* Максимальная высота логотипа */
+        margin: 0; /* Убираем отступ */
+    }
+
+    nav {
+        text-align: center;
+        margin: 0; /* Убираем отступ */
+		margin-top: -30px;
+
     }
 
     nav ul {
         flex-direction: row;
         justify-content: center;
         gap: 10px;
+        margin: 0; /* Убираем отступ сверху */
+        padding-top: 0; /* Убираем padding сверху */
     }
 
     .hero {
@@ -147,7 +167,7 @@ footer {
         margin-top: 0;
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%, -50%);
         z-index: 3;
     }
