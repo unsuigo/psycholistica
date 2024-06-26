@@ -103,7 +103,6 @@ nav ul li a:hover, nav ul li a.active {
     display: block;
     text-align: left;
     margin-top: 10px;
-
 }
 
 footer {
@@ -123,19 +122,17 @@ footer {
     .logo-container {
         margin: 0; /* Убираем отступ */
         text-align: center;
-       
     }
 
     .logo {
         max-height: 100px; /* Максимальная высота логотипа */
-        margin: 0; 
+        margin: 0;
     }
 
     nav {
         text-align: center;
         margin: 0; /* Убираем отступ */
-	margin-top: -30px;
-
+        margin-top: -30px;
     }
 
     nav ul {
@@ -150,6 +147,16 @@ footer {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+        margin-top: -100px; /* Поднимаем секцию вверх */
+        min-height: 100vh; /* Устанавливаем минимальную высоту */
+    }
+
+    .hero-text {
+        max-width: 90%;
+        font-size: 1em;
+        margin-top: 100px; /* Добавляем отступ сверху */
+        position: relative;
+        z-index: 2;
     }
 
     .hero-image {
@@ -159,16 +166,6 @@ footer {
         position: absolute;
         top: 50%;
         left: 50%;
-    }
-
-    .hero-text {
-        max-width: 90%;
-        font-size: 1em;
-        margin-top: 0;
-        position: absolute;
-        top: 50%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
+        z-index: 1;
     }
 }
