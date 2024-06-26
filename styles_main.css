@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    max-height: 150px;
+    max-height: 50px;
     position: relative;
     z-index: 2;
 }
@@ -125,14 +125,15 @@ footer {
     }
 
     .logo {
-        max-height: 100px; /* Максимальная высота логотипа */
+        max-height: 50px; /* Максимальная высота логотипа */
         margin: 0;
+		margin-top: 2px;
     }
 
     nav {
         text-align: center;
         margin: 0; /* Убираем отступ */
-        margin-top: -30px;
+        margin-top: 0px;
     }
 
     nav ul {
@@ -160,7 +161,7 @@ footer {
     }
 
     .hero-image {
-        max-width: 100%;
+        max-width: 80%;
         margin: 20px 0;
         transform: translate(-50%, -50%) scale(1.2);
         position: absolute;
