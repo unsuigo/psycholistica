@@ -1,9 +1,9 @@
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost';
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #333;
+    color: #817168;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -48,15 +48,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #817168;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+	font-family: 'Jost', sans-serif;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #FF8C00; /* Цвет солнца в логотипе */
-    font-weight: bold;
+    
 }
 
 .contact-info {
@@ -86,6 +87,11 @@ nav ul li a:hover, nav ul li a.active {
     border-radius: 5px;
     font-size: 16px;
     font-family: 'Jost', sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .contact-form button {

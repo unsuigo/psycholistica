@@ -16,6 +16,7 @@ header {
     align-items: center;
     padding: 50px 5%;
     background-color: #fff;
+    height: 10px; /* Уменьшаем высоту хедера */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -26,7 +27,7 @@ header {
 }
 
 .logo {
-    max-height: 150px;
+    max-height: 150px; /* Увеличиваем логотип в 5 раз от исходного размера */
     position: relative;
     z-index: 2;
 }
@@ -100,8 +101,6 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Dancing Script', cursive;
     font-size: 1.2em;
     display: block;
-    text-align: left;
-    margin-top: 10px;
 }
 
 footer {

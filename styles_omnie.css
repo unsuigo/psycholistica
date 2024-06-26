@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #6B4C4C; /* Цвет горького шоколада */
+    color: #817168; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,12 +11,12 @@ body {
 
 header {
     display: flex;
+    max-height: 55px; /* Reduced height by 50% */
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15%;
     background-color: #fff;
     position: sticky;
-    top: 0;
+    top: 10;
     z-index: 1000;
 }
 
@@ -48,22 +48,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #A9A9A9; /* Теплый серый цвет */
+    color: #A9A9A9; /* Темно-серый цвет */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    font-family: 'Jost', sans-serif;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #FF8C00; /* Цвет активной вкладки */
-    font-weight: bold;
 }
 
 .hero {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    flex: 1;
+    flex: 2;
     padding: 0 15%;
     position: relative;
 }
@@ -73,15 +73,20 @@ nav ul li a:hover, nav ul li a.active {
     text-align: justify; /* Выровнять текст по обеим сторонам */
     font-size: 18px;
     margin-left: 5%;
-    color: #6B4C4C; /* Цвет горького шоколада */
+    color: #817168; /* Цвет текста */
 }
 
 .hero-image {
-    max-width: 25%;
+    max-width: 45%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     left: 0;
-    top: -50px; /* Поднято вверх, чтобы совместить с первой линией текста */
+    top: 30px; /* Поднято вверх, чтобы совместить с первой линией текста */
+}
+
+.hero-text h1 {
+    font-size: 1.4em; /* Уменьшено на 30% */
+    color: #817168; /* Цвет текста */
 }
 
 footer {
