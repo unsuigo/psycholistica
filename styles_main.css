@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: 'Jost', sans-serif;
     margin: 0;
@@ -49,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #817168; /* Теплый серый цвет */
+    color: #817168;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -57,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #FF8C00; /* Цвет активной вкладки */
+    color: #FF8C00;
 }
 
 .hero {
@@ -84,30 +85,29 @@ nav ul li a:hover, nav ul li a.active {
     position: absolute;
     top: 50%;
     right: 10%;
-    transform: translateY(-50%) scale(1.2); /* Центрируем по вертикали и увеличиваем */
+    transform: translateY(-50%) scale(1.2);
 }
 
 .hero-text blockquote {
     margin: 20px 0;
-    font-size: 18px; /* Размер шрифта для текста в blockquote */
+    font-size: 18px;
 }
 
 .hero-text blockquote p.quote {
-    font-style: italic; /* Наклонный текст */
+    font-style: italic;
 }
 
 .hero-text blockquote p .author {
-    font-family: 'Dancing Script', cursive; /* Рукописный шрифт для автора */
-    font-size: 1.2em; /* Увеличенный размер шрифта для автора */
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
     display: block;
-    text-align: left; /* Выравнивание по правому краю */
-    margin-top: 10px; /* Отступ сверху для автора */
 }
 
 footer {
-    margin-top: 1cm; /* Отступ сверху для футера */
+    margin-top: 1cm;
 }
 
+/* Медиа-запросы для портретного режима */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -117,10 +117,12 @@ footer {
 
     .logo-container {
         margin-bottom: 10px;
+        text-align: center;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         gap: 10px;
     }
 
@@ -133,21 +135,20 @@ footer {
     .hero-image {
         max-width: 100%;
         margin: 20px 0;
-        transform: scale(1.2);
-        position: static;
+        transform: translate(-50%, -50%) scale(1.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 
     .hero-text {
-        max-width: 100%;
+        max-width: 90%;
         font-size: 1em;
         margin-top: 0;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .container {
-        padding-left: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
     }
 }
