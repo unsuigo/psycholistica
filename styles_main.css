@@ -17,7 +17,6 @@ header {
     padding: 50px 5%; /* Оригинальный padding для ландшафтного режима */
     background-color: #fff;
     position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
@@ -38,10 +37,10 @@ nav {
 }
 
 nav ul {
-    padding: 0;
+    padding: 80;
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
 }
 

@@ -25,7 +25,7 @@ header {
 }
 
 .logo {
-    max-height: 150px;
+    max-height: 50px;
     position: relative;
     z-index: 2;
 }
@@ -36,10 +36,10 @@ nav {
 }
 
 nav ul {
-    padding: 0;
+   padding: 80;
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
 }
 
@@ -146,16 +146,34 @@ nav ul li a:hover, nav ul li a.active {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 0; /* Убираем padding */
+        height: 80px; /* Явная высота хедера */
+        justify-content: flex-start; /* Выравниваем элементы по верхнему краю */
     }
 
     .logo-container {
-        margin-bottom: 10px;
+        margin: 0; /* Убираем отступ */
+        text-align: center;
+    }
+
+    .logo {
+        max-height: 30px; /* Максимальная высота логотипа */
+        margin: 0;
+		margin-top: 2px;
+    }
+
+    nav {
+        text-align: center;
+        margin: 0; /* Убираем отступ */
+        margin-top: 0px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        margin: 0; /* Убираем отступ сверху */
+        padding-top: 0; /* Убираем padding сверху */
     }
 
     .contact-info {
