@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5%; /* Оригинальный padding для ландшафтного режима */
+    padding: 10px 15%; /* Оригинальный padding для ландшафтного режима */
     background-color: #fff;
     position: sticky;
     z-index: 1000;
@@ -114,7 +114,7 @@ footer {
         flex-direction: column;
         align-items: center;
         padding: 10; /* Убираем padding */
-        height: 80px; /* Явная высота хедера */
+        height: 50px; /* Явная высота хедера */
         justify-content: flex-start; /* Выравниваем элементы по верхнему краю */
     }
 
