@@ -1,3 +1,7 @@
+:root { 
+    --header-h: 80px; 
+}
+
 body {
     font-family: 'Jost', sans-serif;
     margin: 0;
@@ -9,16 +13,33 @@ body {
     flex-direction: column;
 }
 
-header {
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 20px 15%;
-	 max-height: 55px;
+    max-height: 55px;
+    transition: transform .28s ease, box-shadow .2s ease, background-color .2s ease;
+    will-change: transform;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: saturate(180%) blur(8px);
+}
+
+.site-header.header--hidden { 
+    transform: translateY(-100%); 
+}
+
+.site-header.header--scrolled { 
+    box-shadow: 0 6px 22px rgba(0,0,0,.06); 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header { 
+        transition: none; 
+    }
 }
 
 .logo-container {
