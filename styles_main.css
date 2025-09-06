@@ -90,14 +90,12 @@ nav ul li a:hover, nav ul li a.active {
     color: #FF8C00;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    padding: 0 10%;
+/* оттолкнуть первый экран от липкого хедера */
+.hero{
+    padding: calc(var(--header-h) + 60px) 10% 0; /* top | left-right | bottom */
     position: relative;
-}
+  }
+  
 
 .hero-text {
     max-width: 50%;
@@ -131,7 +129,7 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 1.2em;
     display: block;
     text-align: left;
-    margin-top: 160px;
+    margin-top: 10px;
 }
 
 /* Стили для секций с отступами для sticky header - теперь используется CSS переменная */
@@ -510,4 +508,11 @@ footer {
     .social-icons {
         justify-content: center;
     }
+
+    /* Цитата в hero */
+.hero blockquote{ margin:0; }                 /* убираем внешние отступы у blockquote */
+.hero blockquote p{ margin:0; }               /* убираем стандартные margin у <p> */
+.hero .quote{ margin-bottom:.2em; }           /* маленький зазор между текстом и автором */
+.hero .author{ display:inline-block; margin-top:0; } /* автор вплотную снизу */
+
 }
