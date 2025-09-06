@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="ofertas_style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="logo-container">
-            <a href="oferta.html"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
+            <a href="index.html#top"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
                 <li><a href="oferta.html" class="active">TERAPIE</a></li>
-                <li><a href="omnie.html">TERAPEUTA</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="index.html#terapeuta">TERAPEUTA</a></li>
+                <li><a href="index.html#kontakt">KONTAKT</a></li>
             </ul>
         </nav>
     </header>
@@ -53,6 +53,35 @@
                 });
             });
         });
+
+        // Smart header: hide on scroll down, show on scroll up
+        (function () {
+            const header = document.querySelector('.site-header');
+            if (!header) return;
+
+            const THRESH = 80;
+            let lastY = window.scrollY;
+            let ticking = false;
+
+            function onScroll() {
+                const y = window.scrollY;
+                // тень/фон после порога
+                if (y > THRESH) header.classList.add('header--scrolled');
+                else header.classList.remove('header--scrolled');
+
+                // спрятать при скролле вниз, показать при скролле вверх
+                if (Math.abs(y - lastY) > 5) {
+                    if (y > lastY && y > THRESH) header.classList.add('header--hidden');
+                    else header.classList.remove('header--hidden');
+                    lastY = y;
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+            }, { passive: true });
+        })();
     </script>
 </body>
 </html>

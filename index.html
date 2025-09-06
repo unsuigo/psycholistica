@@ -12,20 +12,20 @@
     <link rel="stylesheet" href="styles_main.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="logo-container">
-            <a href="index.html"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
+            <a href="index.html#top"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="oferta.html">TERAPIE</a></li>
-                <li><a href="omnie.html">TERAPEUTA</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
-            </ul>
+                <li><a href="#terapie">TERAPIE</a></li>
+                <li><a href="#terapeuta">TERAPEUTA</a></li>
+                <li><a href="#kontakt">KONTAKT</a></li>
+              </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="top" class="hero">
         <div class="hero-text">
             <blockquote>
                 <p class="quote">Twoim zadaniem nie jest poszukiwanie miłości, a jedynie tych wszystkich barier w Tobie, które przed nią stworzyłeś. </p>
@@ -38,24 +38,113 @@
         <img src="sun.png" alt="Psychoterapia w Warszawie, Wawer" class="hero-image">
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('nav ul li a');
-            var currentPath = window.location.pathname.split("/").pop();
+    <section id="terapie" class="terapie-preview">
+        <h2>Nasze Terapie</h2>
+        <div class="terapie-grid">
+            <a href="konsultacje.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="Konsul.png" alt="Konsultacje psychologiczne" class="terapie-image">
+                </div>
+                <h3>Konsultacje psychologiczne</h3>
+                <p>Codzienne wyzwania i natłok emocji mogą być nadmiernie przytłaczające. Może stoisz przed trudnym wyborem, masz w głowie chaos albo problem, z którym nie możesz sobie sam poradzić.</p>
+                <span class="dots">...</span>
+            </a>
+            <a href="psychoterapia.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="Psych.png" alt="Psychoterapia" class="terapie-image">
+                </div>
+                <h3>Psychoterapia</h3>
+                <p>Psychoterapia jest dla każdego, kto chce lepiej zrozumieć swój wewnętrzny świat. Jest skuteczną metodą terapeutyczną dla osób, które borykają się z różnymi problemami emocjonalnymi.</p>
+                <span class="dots">...</span>
+            </a>
+            <a href="konsultacje_par.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="pary.png" alt="Konsultacje par" class="terapie-image">
+                </div>
+                <h3>Konsultacje i terapia par</h3>
+                <p>W Twoim związku pojawiły się trudności, z którymi nie możecie sobie poradzić sami? Zastanawiacie się nad terapią par, ale nie wiecie, czego się spodziewać?</p>
+                <span class="dots">...</span>
+            </a>
+            <a href="terapia_dda.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="DDA.png" alt="Terapia DDA" class="terapie-image">
+                </div>
+                <h3>Terapia DDA / DDD</h3>
+                <p>Dorastanie w dysfunkcyjnej rodzinie pozostawia trwałe ślady na psychice i emocjach człowieka, powoduje długotrwały negatywny wpływ na jego funkcjonowanie w życiu dorosłym.</p>
+                <span class="dots">...</span>
+            </a>
+            <a href="interwencja_kryzysowa.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="Inter.png" alt="Interwencja kryzysowa" class="terapie-image">
+                </div>
+                <h3>Interwencja kryzysowa</h3>
+                <p>To natychmiastowa pomoc psychologiczna w sytuacjach nagłych. Interwencja jest formą krótkoterminowego wsparcia psychologicznego skoncentrowana na problemie.</p>
+                <span class="dots">...</span>
+            </a>
+            <a href="holistic_healing.html" class="terapie-card">
+                <div class="card-media">
+                    <img src="HH.png" alt="Holistic Healing" class="terapie-image">
+                </div>
+                <h3>Holistic Healing</h3>
+                <p>Odkryj harmonię ciała i ducha. Holistyczne metody terapii cieszą się coraz większą popularnością i uznaniem zarówno wśród pacjentów, jak i naukowców.</p>
+                <span class="dots">...</span>
+            </a>
+        </div>
+        <div class="terapie-more">
+            <a href="oferta.html" class="btn-more">Zobacz wszystkie terapie</a>
+        </div>
+    </section>
 
-            links.forEach(function(link) {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
+    <section id="terapeuta" class="terapeuta">
+        <div class="terapeuta-content">
+            <img src="magdalena.jpg" alt="Magdalena Surya Zawadzka" class="terapeuta-image">
+            <div class="terapeuta-text">
+                <h2>Magdalena Surya Zawadzka</h2>
+                <p>Psycholog z uniwersyteckim wykształceniem wyższym. Ukończyła 4-letnie podyplomowe szkolenie z psychoanalitycznie zorientowanej psychoterapii indywidualnej i grupowej, atestowane przez Polskie Towarzystwo Psychologiczne i Polskie Towarzystwo Psychiatryczne, w Instytucie Analizy Grupowej "Rasztów", akredytowanym przez EGATIN i EFPP. Odbyła szkolenie dla Psychologów Biegłych Sądowych PTP. Doświadczona we współpracy z sektorem biznesowym na arenie międzynarodowej.</p>
+                <p>Posiada wieloletnią praktykę terapeutyczną w pracy z osobami dorosłymi borykającymi się z różnymi trudnościami życiowymi. Szczególnie bliski jest jej temat budowania zdrowych relacji i praca z parami, a także zarządzanie stresem i wypalenie zawodowe. Prowadzi psychoterapię indywidualną, terapię DDA/DDD, interwencje kryzysowe (zarówno prywatne, jak i pracownicze). Wspiera pacjentów na drodze do samorealizacji, w szerokim temacie impasu egzystencjonalnego, poszukiwania sensu, głębszego zrozumienia siebie i swojego miejsca w świecie.</p>
+                <p>Medytacja jest nieodłączną częścią jej życia. Przez wiele lat uczyła jogi. Prowadziła warsztaty z obszaru psychologii, medytacji, świadomej pracy z ciałem i oddechem. W Indiach odbyła profesjonalny kurs Bio Dynamic Rebalancing (holistyczna terapia manualna), którym z pasją zajmowała się kilkanaście lat. Stworzyła autorską metodę Holistic Healing, łączącą esencje różnych technik terapeutycznych, aby umożliwić swoim pacjentom dynamiczną introspekcję i pogłębienie samoświadomości.</p>
+                <p>Dzięki bogatej wiedzy i eklektycznemu doświadczeniu, zdobytemu zarówno w Polsce, jak i zagranicą, a także dzięki umiejętnościom analitycznym i interpersonalnym oraz holistycznemu podejściu, skutecznie wspiera swoich klientów w rozwoju osobistym. Dzieli się swoją wiedzą jako ekspert w programach telewizyjnych i radiowych, gdzie udziela również konsultacji merytorycznych.</p>
+                <p><strong>PSYCHOLISTICA to gwarancja profesjonalizmu, poufności, empatii i holistycznego podejścia do każdego człowieka.</strong></p>
+                <ul>
+                    <li>Przytulny gabinet w Warszawie (Falenica).</li>
+                    <li>Sesje stacjonarne oraz online.</li>
+                    <li>Sesje w języku polskim i angielskim.</li>
+                </ul>
+                <p>Wyrusz w drogę do lepszego zrozumienia siebie, odnalezienia harmonii i poprawy jakości życia.</p>
+            </div>
+        </div>
+    </section>
 
-                link.addEventListener('click', function() {
-                    links.forEach(function(link) {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
+    <section id="kontakt" class="kontakt">
+        <div class="kontakt-content">
+            <div class="kontakt-info">
+                <h2>Kontakt</h2>
+                <div class="address">
+                    <p>Warszawa - Falenica, Polska</p>
+                    <p><i class="fas fa-phone"></i> tel. +48.881773369</p>
+                    <p><i class="fas fa-phone"></i> magda@psycholistica.pl</p>
+                    
+                    <section class="social-media">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="facebook-50.png" alt="Facebook Logo"></a></li>
+                            <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="instagram-50.png" alt="Instagram Logo"></a></li>
+                            <li><a href="https://wa.me/48881773369" target="_blank"><img src="whatsapp-50.png" alt="WhatsApp Logo"></a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.164283598708!2d21.217707!3d52.1671296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ed556aac0d0cb%3A0x96354f4b699e504b!2sPSYCHOLISTICA!5e0!3m2!1sen!2sus!4v1687440954321!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 PSYCHOLISTICA. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
