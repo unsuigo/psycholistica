@@ -211,3 +211,22 @@ footer {
         padding-left: 0;
     }
 }
+.divider-line {
+    width: 100%;
+    max-width: 400px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #817168, transparent);
+    margin: 30px auto;
+}
+
+@media (max-width: 768px) {
+    .divider-line {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .divider-line {
+        max-width: 100%;
+    }
+}
