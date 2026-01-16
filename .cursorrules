@@ -1,0 +1,9 @@
+мы создаем страницу для психолога в польше. используем готовый шаблон из html и css, который приложен в файлах в папке psycholistica.
+Когда ты пишешь код, то будь уверен что не сломаешь уже существующего кода.
+# SAFE EXECUTION
+- Never run or apply changes automatically. Always show a plan and a DIFF PREVIEW first.
+- Wait for my explicit confirmation phrase: APPLY (in caps) before generating a patch or making edits.
+- If APPLY is not present, reply with: PLAN + what files you will touch + the exact diff preview.
+- Work ONLY on files I list. Do not open other files, do not run background agents.
+- Keep responses compact. Russian explanations, code/identifiers in English.
+

@@ -8,30 +8,39 @@
     <link rel="stylesheet" href="ofertas_style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="logo-container">
-            <a href="oferta.html"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
+            <a href="index.html#top"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="oferta.html" class="active">TERAPIE</a></li>
-                <li><a href="omnie.html">TERAPEUTA</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="index.html#terapie" class="active">TERAPIE</a></li>
+                <li><a href="index.html#terapeuta">TERAPEUTA</a></li>
+                <li><a href="index.html#kontakt">KONTAKT</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-image-container">
-            <a href="oferta.html"><img src="Konsul.png" alt="Konsultacje psychologiczne" class="hero-image"></a>
+            <a href="index.html#terapie"><img src="Konsul.png" alt="Konsultacje psychologiczne" class="hero-image"></a>
         </div>
         <div class="hero-text">
             <h1>Konsultacje psychologiczne</h1>
-            <p>Codzienne wyzwania i natłok emocji mogą być nadmiernie przytłaczające. Może stoisz przed trudnym wyborem, masz w głowie chaos albo problem, z którym nie możesz sobie sam poradzić. Dobrym rozwiązaniem będzie skorzystanie z profesjonalnego wsparcia psychologicznego.</p>
-            <p>Gabinet psychologa jest poufną i bezpieczną przestrzenią, w której możesz być sobą bez osądów. Psycholog wysłucha Cię z empatią, pomoże zapanować nad chaosem myśli i uczuć, zrozumieć Twoje problemy, znaleźć sposoby na ich rozwiązanie. Nie będzie Ci mówić, co masz robić, ale za pomocą fachowych wskazówek pomoże Ci odkryć własne rozwiązania i zasoby. Dostosowane do indywidualnych potrzeb sesje pomagają w zrozumieniu siebie, poprawiają samopoczucie, podnoszą poczucie własnej wartości, wzmacniają zdrowie psychiczne, a w dalszej perspektywie ulepszają jakość życia.</p>
-            <p>Pamiętaj, że z czymkolwiek się zmagasz nie musisz przechodzić przez to sam.</p>
-			<p>Po kilku spotkaniach konsultacyjnych podejmujemy decyzję o ewentualnej regularnej terapii.</p>
+            <p>Codzienne wyzwania, trudne relacje, skomplikowane więzi rodzinne, zmiany, natłok emocji, mogą być nadmiernie przytłaczające. Może masz w głowie chaos czy problem, z którym nie możesz sobie sam poradzić? A może rozważasz terapię? Dobrym rozwiązaniem będzie wówczas skorzystanie z profesjonalnego wsparcia psychologicznego. Gabinet psychologa jest poufną i bezpieczną przestrzenią, w której możesz być sobą bez osądów. Psycholog wysłucha Cię z empatią, pomoże zapanować nad zamętem myśli i uczuć, zrozumieć Twoje problemy, rozpoznać zasoby. Nie będzie Ci mówić, co masz robić, ale za pomocą fachowych wskazówek pomoże Ci odkryć własne rozwiązania. Dostosowane do indywidualnych potrzeb sesje pomagają w zrozumieniu siebie, poprawiają samopoczucie, podnoszą poczucie własnej wartości, w dalszej perspektywie wzmacniają zdrowie psychiczne i ulepszają jakość życia. </p>
+            <p>Z czymkolwiek się zmagasz nie musisz przechodzić przez to sam. </p>
+			<p>Po kilku spotkaniach konsultacyjnych podejmujemy decyzję o ewentualnym rozpoczęciu procesu psychoterapeutycznego.</p>
 			
+			<h2>Poradnictwo</h2>
+			<p>Zdarzają się w życiu sytuacje, w których najbardziej pomocne będzie doraźne ukierunkowane wsparcie psychologiczne, bez rozważania terapii. Dlatego istnieje możliwość umówienia się na konsultację ad hoc o charakterze doradczym, z elementami mentoringu / coachingu. Podczas takiej sesji koncentrujemy się na omówieniu konkretnego problemu, pozostajemy głównie w "tu i teraz".</p>
+			
+			<h3>Kiedy warto skorzystać z poradnictwa?</h3>
+			<ul>
+				<li>Gdy potrzebujesz obiektywnej perspektywy i wskazówek w naglącej sprawie.</li>
+				<li>Gdy chcesz szybko podjąć ważną decyzję, dokonać trudnego wybory, ale brakuje Ci jasności.</li>
+				<li>Gdy chcesz się dobrze przygotować do ważnego spotkania, rozmowy.</li>
+				<li>Gdy szukasz ukierunkowania na konkretne rozwiązanie i praktyczne strategie działania.</li>
+			</ul>
         </div>
     </section>
 
@@ -53,6 +62,35 @@
                 });
             });
         });
+
+        // Smart header: hide on scroll down, show on scroll up
+        (function () {
+            const header = document.querySelector('.site-header');
+            if (!header) return;
+
+            const THRESH = 80;
+            let lastY = window.scrollY;
+            let ticking = false;
+
+            function onScroll() {
+                const y = window.scrollY;
+                // тень/фон после порога
+                if (y > THRESH) header.classList.add('header--scrolled');
+                else header.classList.remove('header--scrolled');
+
+                // спрятать при скролле вниз, показать при скролле вверх
+                if (Math.abs(y - lastY) > 5) {
+                    if (y > lastY && y > THRESH) header.classList.add('header--hidden');
+                    else header.classList.remove('header--hidden');
+                    lastY = y;
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+            }, { passive: true });
+        })();
     </script>
 </body>
 </html>
