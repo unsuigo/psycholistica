@@ -258,6 +258,15 @@ nav ul li a:hover, nav ul li a.active {
     background-color: #fff;
 }
 
+.terapeuta > h2 {
+    font-size: 2em;
+    color: #817168;
+    margin-bottom: 40px;
+    margin-top: -2cm;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+}
+
 .terapeuta-content {
     display: grid;
     grid-template-columns: 45% 55%;
