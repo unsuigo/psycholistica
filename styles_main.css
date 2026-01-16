@@ -248,32 +248,41 @@ nav ul li a:hover, nav ul li a.active {
     color: white;
 }
 
-/* Секция Terapeuta */
+/* ============================= */
+/* Секция Terapeuta – GRID LAYOUT */
+/* 2 абзаца рядом с фото, дальше full width */
+/* ============================= */
+
 .terapeuta {
     padding: 80px 15% 60px;
     background-color: #fff;
 }
 
 .terapeuta-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    column-gap: 50px;
+    align-items: start;
 }
 
+/* Фото */
 .terapeuta-image {
-    max-width: 45%;
+    grid-column: 1;
+    width: 100%;
+    max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
+/* Текст – стартует рядом с фото */
 .terapeuta-text {
-    max-width: 55%;
-    text-align: justify;
+    grid-column: 2;
     font-size: 18px;
     color: #817168;
+    text-align: justify;
 }
 
+/* Заголовок */
 .terapeuta-text h2 {
     font-size: 1.4em;
     color: #817168;
@@ -281,6 +290,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Jost', sans-serif;
 }
 
+/* Базовые отступы текста */
 .terapeuta-text p {
     margin-bottom: 20px;
     line-height: 1.6;
@@ -295,6 +305,33 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 10px;
     line-height: 1.6;
 }
+
+/* 🔑 КЛЮЧ: всё, что идёт ПОСЛЕ 2-го абзаца — на всю ширину */
+.terapeuta-text > p:nth-of-type(n+3),
+.terapeuta-text > ul,
+.terapeuta-text > h3,
+.terapeuta-text > h4 {
+    grid-column: 1 / -1;
+}
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+@media (max-width: 768px) {
+    .terapeuta-content {
+        display: block;
+    }
+
+    .terapeuta-text {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .terapeuta-image {
+        margin-bottom: 30px;
+    }
+}
+
 
 /* Секция Kontakt */
 .kontakt {
