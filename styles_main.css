@@ -501,30 +501,48 @@ footer {
     }
 
     .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        margin-top: -100px; /* Поднимаем секцию вверх */
-        min-height: 100vh; /* Устанавливаем минимальную высоту */
-    }
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: -40px;
+
+    min-height: 100vh;
+
+    position: relative;
+}
 
     .hero-text {
-        max-width: 90%;
-        font-size: 1em;
-        margin-top: 100px; /* Добавляем отступ сверху */
-        position: relative;
-        z-index: 2;
-    }
+    max-width: 90%;
+
+    font-size: 1em;
+
+    position: relative;
+
+    top: 0px;
+
+    z-index: 3;
+}
 
     .hero-image {
-        max-width: 80%;
-        margin: 20px 0;
-        transform: translate(-50%, -50%) scale(1.2);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
-    }
+    width: 95vw;
+
+    max-width: 700px;
+
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
 
     /* Мобильные стили для новых секций */
     .terapie-preview {
