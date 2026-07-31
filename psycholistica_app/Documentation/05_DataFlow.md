@@ -1,240 +1,410 @@
-Psycholistica
+# Psycholistica
 
-Document: 05_DataFlow Version: 1.0 Status: Active Last Updated:2026-07-30
+**Document:** 05_DataFlow
 
-PURPOSE
+**Version:** 1.1
+
+**Status:** Active
+
+**Last Updated:** 2026-07-30
+
+---
+
+# PURPOSE
 
 This document defines how data moves through the application.
 
-The data flow must remain identical regardless of whether the source islocal storage or Supabase.
+The data flow must remain identical regardless of whether the application uses local storage, cloud services or a dedicated backend.
 
-CORE PRINCIPLE
+---
+
+# CORE PRINCIPLE
 
 The UI must never know where the data comes from.
 
-Changing the backend must not require changes in the presentation layer.
+Changing infrastructure providers must never require changes in:
 
-DATA FLOW
+- Presentation
+- Domain
+- Business Logic
 
+Only datasource implementations should change.
+
+---
+
+# DATA FLOW
+
+```
 User Action
-│
-▼
+        │
+        ▼
 Presentation
 (Page / Widget)
-│
-▼
+        │
+        ▼
 Riverpod Provider
-│
-▼
+        │
+        ▼
+Use Case
+        │
+        ▼
 Repository Interface
-│
-▼
+        │
+        ▼
 Repository Implementation
-│
-▼
+        │
+        ▼
 Datasource
-(Local / Supabase)
-│
-▼
-Domain Entity
-│
-▼
-Presentation
+        │
+        ▼
+Infrastructure
+```
 
 Every layer has a single responsibility.
 
-PRESENTATION
+---
+
+# PRESENTATION
 
 Responsibilities:
 
-Display data
+- Display data
+- Receive user input
+- Trigger actions
+- Display loading and error states
 
-Receive user input
+Presentation must not:
 
-Trigger actions
+- Query databases
+- Call Supabase
+- Call Cloudflare
+- Parse JSON
+- Implement business rules
 
-Must not:
+---
 
-Query databases
+# PROVIDERS
 
-Call Supabase directly
-
-Parse JSON
-
-Implement business rules
-
-PROVIDERS
-
-Riverpod providers coordinate communication between UI and repositories.
+Riverpod providers coordinate communication between the UI and the Domain layer.
 
 Responsibilities:
 
-Load data
-
-Refresh state
-
-Expose UI state
+- Load data
+- Refresh state
+- Expose UI state
+- Coordinate user actions
 
 Providers should remain lightweight.
 
-REPOSITORIES
+---
 
-Repositories provide a stable API for the rest of the application.
+# USE CASES
 
-Current implementation:
-
-Local repositories.
-
-Future implementation:
-
-Supabase repositories.
-
-Nothing above the repository layer should notice the difference.
-
-DATASOURCES
-
-Datasource implementations communicate with external storage.
+Use cases contain application-specific business actions.
 
 Examples:
 
-Current:
+- Load Meditations
+- Load Books
+- Login User
+- Play Meditation
+- Toggle Favorite
 
-Local Dart collections
+Use cases communicate only with repository interfaces.
 
-Future:
+---
 
-Supabase Database
+# REPOSITORIES
 
-Supabase Storage
+Repositories provide a stable API for the application.
 
-Only datasources know how data is stored.
+Responsibilities:
 
-DOMAIN
+- Hide infrastructure details
+- Combine multiple datasources
+- Return domain entities
+- Convert datasource errors into application failures
+
+Nothing above the repository layer should know how data is stored.
+
+---
+
+# DATASOURCES
+
+Datasource implementations communicate with infrastructure.
+
+Examples:
+
+## Local
+
+- Dart collections
+- Local JSON
+- Local cache
+
+## Cloud
+
+- Supabase Auth
+- Supabase PostgreSQL
+- Cloudflare R2
+
+## Future
+
+- REST API
+- Dedicated Backend
+- Object Storage
+
+Only datasources know how data is stored or retrieved.
+
+---
+
+# INFRASTRUCTURE
+
+Infrastructure services have separate responsibilities.
+
+## Supabase Auth
+
+Responsible for:
+
+- Login
+- Registration
+- Session
+- User identity
+
+---
+
+## Supabase PostgreSQL
+
+Responsible for:
+
+- Users
+- Content metadata
+- Favorites
+- Progress
+- Subscription state
+
+---
+
+## Cloudflare R2
+
+Responsible for:
+
+- MP3
+- Images
+- Cover images
+- Future videos
+
+Large binary files are never stored in PostgreSQL.
+
+---
+
+# DOMAIN
 
 Domain entities represent business objects.
 
-They are independent of:
+The Domain layer is completely independent from:
 
-Flutter
+- Flutter
+- JSON
+- HTTP
+- Supabase
+- Cloudflare
+- Storage providers
 
-Supabase
+---
 
-JSON
-
-HTTP
-
-CONTENT FLOW
+# CONTENT FLOW
 
 Example:
 
+```
 User opens Home
 
-↓
+        ↓
 
-Provider requests content
+HomeProvider
 
-↓
+        ↓
+
+LoadContentUseCase
+
+        ↓
 
 ContentRepository
 
-↓
+        ↓
 
-LocalContentDatasource
+ContentDatasource
 
-↓
+        ↓
+
+Supabase PostgreSQL
+
+        ↓
 
 List<Content>
 
-↓
+        ↓
 
 Home UI
+```
 
-Later:
+The UI never knows where the data originated.
 
-ContentRepository
+---
 
-↓
-
-SupabaseContentDatasource
-
-The UI remains unchanged.
-
-SUBSCRIPTION FLOW
-
-User selects premium content
-
-↓
-
-Access Service
-
-↓
-
-Subscription Status
-
-↓
-
-Access Granted / Access Denied
-
-↓
-
-Open Player or Purchase Screen
-
-The content type is irrelevant.
-
-The access system treats every Content object the same.
-
-ERROR FLOW
-
-External errors are converted into application-friendly states.
+# MEDIA FLOW
 
 Example:
 
+```
+User presses Play
+
+        ↓
+
+PlayerProvider
+
+        ↓
+
+PlayMeditationUseCase
+
+        ↓
+
+ContentRepository
+
+        ↓
+
+StorageDatasource
+
+        ↓
+
+Cloudflare R2
+
+        ↓
+
+Audio Stream
+
+        ↓
+
+Player
+```
+
+Metadata and media are loaded independently.
+
+---
+
+# SUBSCRIPTION FLOW
+
+```
+User selects Premium Content
+
+        ↓
+
+Access Service
+
+        ↓
+
+Subscription Repository
+
+        ↓
+
+Supabase PostgreSQL
+
+        ↓
+
+Access Granted / Access Denied
+
+        ↓
+
+Player or Subscription Screen
+```
+
+The subscription system works independently from the content type.
+
+---
+
+# ERROR FLOW
+
+Infrastructure errors are converted into application-friendly states.
+
+```
 Datasource Error
 
-↓
+        ↓
 
 Repository
 
-↓
+        ↓
 
-Failure / Empty Result
+Application Failure
 
-↓
+        ↓
 
 Provider
 
-↓
+        ↓
 
 UI Message
+```
 
 The UI should never display raw backend errors.
 
-DO
+---
 
-Keep one-way data flow.
+# DESIGN RULES
 
-Keep repositories replaceable.
+Every layer has one responsibility.
 
-Keep UI independent.
+Dependencies always point downward.
 
-Keep domain pure.
+```
+Presentation
 
-DON'T
+        ↓
 
-UI talking directly to Supabase.
+Domain
 
-Providers parsing JSON.
+        ↓
 
-Business logic inside widgets.
+Repository
 
-Feature bypassing repositories.
+        ↓
 
-RELATED DOCUMENTS
+Datasource
 
-01_Architecture.md
+        ↓
 
-03_FolderStructure.md
+Infrastructure
+```
 
-04_ContentModel.md
+Communication must never bypass a layer.
 
-06_TechStack.md
+---
+
+# DO
+
+- Keep one-way data flow.
+- Keep repositories replaceable.
+- Keep datasources replaceable.
+- Keep infrastructure independent.
+- Keep domain pure.
+- Return domain entities from repositories.
+
+---
+
+# DON'T
+
+- UI talking directly to Supabase.
+- UI talking directly to Cloudflare.
+- Providers parsing JSON.
+- Business logic inside widgets.
+- Features bypassing repositories.
+- Tight coupling to infrastructure.
+
+---
+
+# RELATED DOCUMENTS
+
+- 01_Architecture.md
+- 03_FolderStructure.md
+- 04_ContentModel.md
+- 06_TechStack.md

@@ -1,66 +1,135 @@
-Psycholistica
+# Psycholistica
 
-Document: 06_TechStack Version: 1.0 Status: Active Last Updated:2026-07-30
+**Document:** 06_TechStack
 
-PURPOSE
+**Version:** 1.1
 
-This document defines the technologies approved for the Psycholisticaproject.
+**Status:** Active
 
-New technologies should only be introduced when they provide a cleararchitectural or maintenance benefit.
+**Last Updated:** 2026-07-30
 
-FRONTEND
+---
 
-Framework
+# PURPOSE
+
+This document defines the technologies approved for the Psycholistica project.
+
+The project prioritizes maintainability, scalability and infrastructure independence.
+
+New technologies should only be introduced when they provide a clear architectural or long-term maintenance benefit.
+
+---
+
+# FRONTEND
+
+## Framework
 
 Flutter
 
-Language
+## Language
 
 Dart
 
-Design System
+## Design System
 
 Material 3
 
-TARGET PLATFORMS
+---
+
+# TARGET PLATFORMS
 
 A single codebase should support:
 
-Progressive Web App (PWA)
+- Progressive Web App (PWA)
+- Android
+- iOS
+- Windows
+- macOS
+- Linux
 
-Android
+The application architecture must remain identical across all platforms.
 
-iOS
+---
 
-Windows
+# BACKEND
 
-macOS
+## Authentication
 
-Linux
+Supabase Auth
 
-The architecture must remain identical across all targets.
+Responsible for:
 
-BACKEND
+- User Authentication
+- Session Management
+- Password Reset
+- OAuth Providers
 
-Platform
+---
 
-Supabase
+## Database
 
-Planned services:
+Supabase PostgreSQL
 
-Authentication
+Responsible for:
 
-PostgreSQL Database
+- Users
+- Content metadata
+- Categories
+- Favorites
+- Progress
+- Subscription status
+- Play history
 
-Storage
+The database stores only structured application data.
 
-Edge Functions (if required)
+---
 
-Realtime (only if required)
+## Object Storage
 
-The application must work with local data before Supabase integration.
+Current provider:
 
-STATE MANAGEMENT
+Cloudflare R2
+
+Responsible for storing:
+
+- MP3
+- Images
+- Cover images
+- Future videos
+- Downloadable resources
+
+Large binary assets must never be stored inside the database.
+
+---
+
+# INFRASTRUCTURE STRATEGY
+
+## Stage 1
+
+- Flutter
+- Local data
+- Supabase Auth
+- Supabase PostgreSQL
+- Cloudflare R2
+
+## Stage 2
+
+- REST API (optional)
+- Background processing
+- Server-side business logic
+
+## Stage 3
+
+- Dedicated backend
+- Hetzner VPS (or equivalent)
+- PostgreSQL
+- S3-compatible object storage
+
+The architecture must allow migration between stages without affecting the Presentation or Domain layers.
+
+---
+
+# STATE MANAGEMENT
 
 Approved:
 
@@ -68,126 +137,208 @@ Riverpod
 
 Purpose:
 
-State management
+- State Management
+- Dependency Injection
+- Provider lifecycle
+- Repository Providers
+- Service Providers
 
-Dependency Injection
+---
 
-Provider lifecycle
-
-NAVIGATION
+# NAVIGATION
 
 Approved:
 
 go_router
 
-Navigation should be centralized and declarative.
+Navigation should remain centralized and declarative.
 
-AUDIO
+---
+
+# AUDIO
 
 Requirements:
 
-Streaming playback
+- Streaming playback
+- Background playback (where supported)
+- Progress tracking
+- Pause / Resume
+- Premium access support
 
-Background playback (where supported)
+Audio implementation must remain isolated behind abstractions.
 
-Progress tracking
+The UI must never communicate directly with storage providers.
 
-Pause / Resume
+---
 
-Premium access support
-
-Audio implementation should be isolated behind an abstraction.
-
-AUTHENTICATION
+# AUTHENTICATION
 
 Current:
 
-None (local development)
+Local development
 
-Future:
+Production:
 
-Supabase Authentication
+Supabase Auth
 
 Authentication must remain independent from content features.
 
-SUBSCRIPTIONS
+---
+
+# SUBSCRIPTIONS
 
 The subscription system is a platform service.
 
 It controls access to premium content regardless of content type.
 
-The implementation should be replaceable without affecting UI.
+The implementation should remain replaceable without affecting UI or business logic.
 
-STORAGE STRATEGY
+---
 
-Stage 1
+# STORAGE STRATEGY
+
+## Stage 1
 
 Local Dart collections
 
-Stage 2
+## Stage 2
 
-Supabase Database
+Supabase PostgreSQL
 
-Supabase Storage
+Cloudflare R2
 
-The UI must not know which storage is used.
+## Stage 3
 
-DEPLOYMENT
+Custom Backend API
 
-Source Control
+Object Storage
+
+The application must not depend on any specific storage provider.
+
+Only datasource implementations should know which storage service is being used.
+
+---
+
+# DATABASE STRATEGY
+
+Store only structured data.
+
+Examples:
+
+- User profile
+- Meditation metadata
+- Categories
+- Favorites
+- Progress
+- Subscription state
+
+Never store:
+
+- MP3
+- Images
+- Videos
+- Binary resources
+
+Instead, store references (URLs) to object storage.
+
+---
+
+# DEPLOYMENT
+
+## Source Control
 
 GitHub
 
-Branch Strategy
+## Branch Strategy
 
-feature/* ↓ dev ↓ main
+feature/*
 
-Deployment
+↓
+
+dev
+
+↓
+
+main
+
+## Deployment
 
 GitHub Pages (PWA)
 
-The main branch is the production branch.
+The main branch is always the production branch.
 
-DEVELOPMENT TOOLS
+---
 
-Primary IDE
+# DEVELOPMENT TOOLS
+
+## Primary IDE
 
 Rider
 
-Supported IDE
+## Supported IDE
 
 Visual Studio Code
 
-Version Control
+## Version Control
 
 Git
 
 GitHub
 
-DO
+---
 
-Prefer stable libraries.
+# DESIGN PRINCIPLES
 
-Keep external dependencies minimal.
+- Feature First Architecture
+- Clean Architecture
+- Repository Pattern
+- Explicit Dependency Injection
+- Infrastructure Independence
 
-Wrap third-party SDKs behind abstractions.
+---
 
-Prefer cross-platform solutions.
+# DO
 
-DON'T
+- Prefer stable libraries.
+- Keep external dependencies minimal.
+- Wrap third-party SDKs behind abstractions.
+- Prefer cross-platform solutions.
+- Keep backend providers replaceable.
+- Keep storage providers replaceable.
 
-Platform-specific code without necessity.
+---
 
-Direct dependency on backend SDKs inside UI.
+# DON'T
 
-Replace core technologies without architectural review.
+- Platform-specific code without necessity.
+- Direct dependency on backend SDKs inside UI.
+- Direct dependency on storage SDKs inside UI.
+- Tight coupling to Supabase.
+- Tight coupling to Cloudflare.
+- Replace core technologies without architectural review.
 
-RELATED DOCUMENTS
+---
 
-01_Architecture.md
+# FUTURE TECHNOLOGIES
 
-04_ContentModel.md
+Possible future additions:
 
-05_DataFlow.md
+- REST API
+- GraphQL
+- AI Services
+- Push Notifications
+- Offline Synchronization
+- Analytics
+- CDN
+- Dedicated Backend
 
-07_GitWorkflow.md
+These technologies should integrate through abstractions without changing business logic.
+
+---
+
+# RELATED DOCUMENTS
+
+- 01_Architecture.md
+- 04_ContentModel.md
+- 05_DataFlow.md
+- 07_GitWorkflow.md

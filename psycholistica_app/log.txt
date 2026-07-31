@@ -1,0 +1,147 @@
+Launching lib\main.dart on Windows in debug mode...
+Building Windows application...                                    11,0s
+√ Built build\windows\x64\runner\Debug\_app.exe
+Syncing files to device Windows...                                 108ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on Windows is available at: http://127.0.0.1:50672/aVyxYgiKHrY=/
+The Flutter DevTools debugger and profiler on Windows is available at: http://127.0.0.1:50672/aVyxYgiKHrY=/devtools/?uri=ws://127.0.0.1:50672/aVyxYgiKHrY=/ws
+[AUDIO] File path: D:/Meditation/Audio/Nowe nagranie v.1.0.m4a
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: 25 will not be in the tree and is not the new root
+[AUDIO] Exists: true
+[AUDIO] Loading...
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: 24 will not be in the tree and is not the new root
+[ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: MissingPluginException(No implementation found for method disposeAllPlayers on channel com.ryanheise.just_audio.methods)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:364:7)
+<asynchronous suspension>
+#1      MethodChannelJustAudio.disposeAllPlayers (package:just_audio_platform_interface/method_channel_just_audio.dart:29:10)
+<asynchronous suspension>
+
+[AUDIO ERROR] MissingPluginException(No implementation found for method init on channel com.ryanheise.just_audio.methods)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:364:7)
+<asynchronous suspension>
+#1      MethodChannelJustAudio.init (package:just_audio_platform_interface/method_channel_just_audio.dart:13:5)
+<asynchronous suspension>
+#2      AudioPlayer._setPlatformActive.setPlatform.<anonymous closure> (package:just_audio/just_audio.dart:1636:15)
+<asynchronous suspension>
+#3      ReentrantLock.synchronized.<anonymous closure> (package:synchronized/src/reentrant_lock.dart:40:18)
+<asynchronous suspension>
+#4      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)
+<asynchronous suspension>
+#5      AudioPlayer._setPlatformActive.setPlatform (package:just_audio/just_audio.dart:1615:24)
+<asynchronous suspension>
+#6      AudioPlayer._setPlatformActive.<anonymous closure> (package:just_audio/just_audio.dart:1769:27)
+<asynchronous suspension>
+#7      AudioPlayer.load (package:just_audio/just_audio.dart:926:14)
+<asynchronous suspension>
+#8      AudioPlayer.setAudioSources (package:just_audio/just_audio.dart:897:18)
+<asynchronous suspension>
+#9      AudioPlayerService.load.<anonymous closure> (package:_app/core/services/audio_player_service.dart:34:7)
+<asynchronous suspension>
+#10     AudioPlayerService._run (package:_app/core/services/audio_player_service.dart:79:14)
+<asynchronous suspension>
+#11     AudioPlayerService.load (package:_app/core/services/audio_player_service.dart:19:5)
+<asynchronous suspension>
+#12     _FutureBuilderState._subscribe.<anonymous closure> (package:flutter/src/widgets/async.dart:641:7)
+<asynchronous suspension>
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(114)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+[AUDIO ERROR] MissingPluginException(No implementation found for method init on channel com.ryanheise.just_audio.methods)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:364:7)
+<asynchronous suspension>
+#1      MethodChannelJustAudio.init (package:just_audio_platform_interface/method_channel_just_audio.dart:13:5)
+<asynchronous suspension>
+#2      AudioPlayer._setPlatformActive.setPlatform.<anonymous closure> (package:just_audio/just_audio.dart:1636:15)
+<asynchronous suspension>
+#3      ReentrantLock.synchronized.<anonymous closure> (package:synchronized/src/reentrant_lock.dart:40:18)
+<asynchronous suspension>
+#4      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)
+<asynchronous suspension>
+#5      AudioPlayer._setPlatformActive.setPlatform (package:just_audio/just_audio.dart:1615:24)
+<asynchronous suspension>
+#6      AudioPlayer._setPlatformActive.<anonymous closure> (package:just_audio/just_audio.dart:1769:27)
+<asynchronous suspension>
+#7      AudioPlayer.load (package:just_audio/just_audio.dart:926:14)
+<asynchronous suspension>
+#8      AudioPlayer.setAudioSources (package:just_audio/just_audio.dart:897:18)
+<asynchronous suspension>
+#9      AudioPlayerService.load.<anonymous closure> (package:_app/core/services/audio_player_service.dart:34:7)
+<asynchronous suspension>
+#10     AudioPlayerService._run (package:_app/core/services/audio_player_service.dart:79:14)
+[ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: MissingPluginException(No implementation found for method init on channel com.ryanheise.just_audio.methods)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:364:7)
+<asynchronous suspension>
+#1      MethodChannelJustAudio.init (package:just_audio_platform_interface/method_channel_just_audio.dart:13:5)
+<asynchronous suspension>
+#2      AudioPlayer._setPlatformActive.setPlatform.<anonymous closure> (package:just_audio/just_audio.dart:1636:15)
+<asynchronous suspension>
+#3      ReentrantLock.synchronized.<anonymous closure> (package:synchronized/src/reentrant_lock.dart:40:18)
+<asynchronous suspension>
+#4      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)
+<asynchronous suspension>
+#5      AudioPlayer._setPlatformActive.setPlatform (package:just_audio/just_audio.dart:1615:24)
+<asynchronous suspension>
+#6      AudioPlayer._setPlatformActive.<anonymous closure> (package:just_audio/just_audio.dart:1769:27)
+<asynchronous suspension>
+#7      AudioPlayer.load (package:just_audio/just_audio.dart:926:14)
+<asynchronous suspension>
+#8      AudioPlayer.setAudioSources (package:just_audio/just_audio.dart:897:18)
+<asynchronous suspension>
+#9      AudioPlayerService.load.<anonymous closure> (package:_app/core/services/audio_player_service.dart:34:7)
+<asynchronous suspension>
+#10     AudioPlayerService._run (package:_app/core/services/audio_player_service.dart:79:14)
+<asynchronous suspension>
+#11     AudioPlayerService.load (package:_app/core/services/audio_player_service.dart:19:5)
+<asynchronous suspension>
+#12     _FutureBuilderState._subscribe.<anonymous closure> (package:flutter/src/widgets/async.dart:641:7)
+<asynchronous suspension>
+
+<asynchronous suspension>
+#11     AudioPlayerService.load (package:_app/core/services/audio_player_service.dart:19:5)
+<asynchronous suspension>
+#12     _FutureBuilderState._subscribe.<anonymous closure> (package:flutter/src/widgets/async.dart:641:7)
+<asynchronous suspension>
+[ERROR:flutter/shell/platform/common/accessibility_bridge.cc(65)] Failed to update ui::AXTree, error: Nodes left pending by the update: 38 39
+Lost connection to device.

@@ -33,6 +33,10 @@ dependencies:
 
   flutter_riverpod: ^3.4.1
   go_router: ^17.3.0
+  just_audio: ^0.10.6
+  just_audio_windows: ^0.2.3
+  video_player: ^2.13.0
+  video_player_win: ^3.2.2
 
 dev_dependencies:
   flutter_test:
