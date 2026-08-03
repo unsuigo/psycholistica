@@ -126,3 +126,52 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
     }, { passive: true });
 })();
+
+// Soft pointer and touch ripples over the stationary hero sun
+(function () {
+    const sun = document.querySelector('.sun-ripple-surface');
+    const rippleLayer = sun?.querySelector('.sun-ripples');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (!sun || !rippleLayer || reducedMotion.matches) return;
+
+    let lastRippleTime = 0;
+    let lastX = null;
+    let lastY = null;
+
+    function createRipple(event, force) {
+        if (reducedMotion.matches) return;
+
+        const rect = sun.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        if (x < 0 || y < 0 || x > rect.width || y > rect.height) return;
+
+        const now = performance.now();
+        const distance = lastX === null ? Infinity : Math.hypot(x - lastX, y - lastY);
+
+        if (!force && (now - lastRippleTime < 70 || distance < 10)) return;
+
+        const ripple = document.createElement('span');
+        ripple.className = 'sun-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+        rippleLayer.appendChild(ripple);
+
+        lastRippleTime = now;
+        lastX = x;
+        lastY = y;
+    }
+
+    sun.addEventListener('pointerdown', event => createRipple(event, true));
+    sun.addEventListener('pointermove', event => createRipple(event, false));
+    sun.addEventListener('pointerleave', () => {
+        lastX = null;
+        lastY = null;
+    });
+    reducedMotion.addEventListener('change', event => {
+        if (event.matches) rippleLayer.replaceChildren();
+    });
+})();
