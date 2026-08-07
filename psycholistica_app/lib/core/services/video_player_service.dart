@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerService {
@@ -7,8 +5,8 @@ class VideoPlayerService {
 
   VideoPlayerController? get controller => _controller;
 
-  Future<void> initialize(String filePath) async {
-    final controller = VideoPlayerController.file(File(filePath));
+  Future<void> initialize(String assetPath) async {
+    final controller = VideoPlayerController.asset(assetPath);
     _controller = controller;
 
     try {

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:_app/core/services/media_service.dart';
 import 'package:_app/shared/models/content.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +24,8 @@ class ContentCard extends StatelessWidget {
             children: [
               AspectRatio(
                 aspectRatio: 16 / 9,
-                child: Image.file(
-                  File(imagePath),
+                child: Image.asset(
+                  imagePath,
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return ColoredBox(

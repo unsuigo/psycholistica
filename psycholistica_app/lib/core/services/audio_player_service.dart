@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
@@ -23,35 +22,28 @@ class AudioPlayerService {
   final AudioPlayer _player;
   late final StreamSubscription<PlayerException> _errorSubscription;
   late final StreamSubscription<PlayerState> _playerStateSubscription;
-  String? _loadedFilePath;
+  String? _loadedAssetPath;
 
-  Future<void> load(String filePath) async {
+  Future<void> load(String assetPath) async {
     await _run(() async {
-      debugPrint('[AUDIO] Requested file: $filePath');
+      debugPrint('[AUDIO] Requested asset: $assetPath');
 
-      final fileExists = await File(filePath).exists();
-      debugPrint('[AUDIO] File exists: $fileExists');
-
-      if (!fileExists) {
-        throw FileSystemException('Audio file does not exist', filePath);
-      }
-
-      if (_loadedFilePath == filePath) {
+      if (_loadedAssetPath == assetPath) {
         return;
       }
 
       debugPrint('[AUDIO] Loading...');
-      await _player.setFilePath(filePath);
-      _loadedFilePath = filePath;
+      await _player.setAsset(assetPath);
+      _loadedAssetPath = assetPath;
       debugPrint('[AUDIO] Loaded');
       debugPrint('[AUDIO] Duration: ${_player.duration}');
     });
   }
 
-  Future<void> play(String filePath) async {
+  Future<void> play(String assetPath) async {
     await _run(() async {
       debugPrint('[AUDIO] Play pressed');
-      await load(filePath);
+      await load(assetPath);
       final playback = _player.play();
       await playback;
     });

@@ -19,8 +19,8 @@ class PlayerPage extends StatefulWidget {
 class _PlayerPageState extends State<PlayerPage> {
   late final AudioPlayerService _audioPlayerService;
   late final VideoPlayerService _videoPlayerService;
-  late final String _audioPath;
-  late final String _videoPath;
+  late final String _audioAssetPath;
+  late final String _videoAssetPath;
   late final Future<void> _loadAudio;
   late final Future<void> _initializeVideo;
 
@@ -29,10 +29,10 @@ class _PlayerPageState extends State<PlayerPage> {
     super.initState();
     _audioPlayerService = AudioPlayerService();
     _videoPlayerService = VideoPlayerService();
-    _audioPath = const MediaService().audioPath(widget.content.audioFile);
-    _videoPath = const MediaService().videoPath(widget.content.videoFile);
-    _loadAudio = _audioPlayerService.load(_audioPath);
-    _initializeVideo = _videoPlayerService.initialize(_videoPath);
+    _audioAssetPath = const MediaService().audioPath(widget.content.audioFile);
+    _videoAssetPath = const MediaService().videoPath(widget.content.videoFile);
+    _loadAudio = _audioPlayerService.load(_audioAssetPath);
+    _initializeVideo = _videoPlayerService.initialize(_videoAssetPath);
   }
 
   @override
@@ -176,7 +176,7 @@ class _PlayerPageState extends State<PlayerPage> {
                                               } else {
                                                 unawaited(
                                                   _audioPlayerService.play(
-                                                    _audioPath,
+                                                    _audioAssetPath,
                                                   ),
                                                 );
                                               }
