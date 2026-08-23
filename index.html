@@ -3,217 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5efe7">
+    <meta name="description" content="Psychoterapia indywidualna i terapia par w Warszawie oraz online. Ponad 20 lat doświadczenia. Sesje po polsku i angielsku.">
+    <title>Psycholistica — psychoterapia w Warszawie i online</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Psycholog, psychoterapeuta | Warszawa Wawer Falenica</title>
-    <meta name="description" content="25 lat doświadczenia. Terapia par, DDA/DDD, pomoc w kryzysie. Gabinet stacjonarny & online. PL/EN. Tu zaczyna się zmiana - umów wizytę.">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles_main.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo-container">
-            <a href="index.html#top"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
+    <a class="skip-link" href="#main-content">Przejdź do treści</a>
+
+    <header class="site-header" data-header>
+        <div class="container header-inner">
+            <a class="brand" href="#top" aria-label="Psycholistica — strona główna">
+                <img src="logo.png" alt="Psycholistica">
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Otwórz menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Główna nawigacja">
+                <a href="#terapie">Terapie</a>
+                <a href="#podejscie">Podejście</a>
+                <a href="#terapeuta">Terapeutka</a>
+                <a href="#proces">Jak zacząć</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+
+            <a class="button button--small header-cta" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów konsultację</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#terapie">TERAPIE</a></li>
-                <li><a href="#terapeuta">TERAPEUTA</a></li>
-                <li><a href="#kontakt">KONTAKT</a></li>
-              </ul>
-        </nav>
     </header>
 
-    <section id="top" class="hero">
-        <div class="hero-text">
-            <blockquote>
-                <p class="quote">Twoim zadaniem nie jest poszukiwanie miłości, a jedynie tych wszystkich barier w Tobie, które przed nią stworzyłeś. </p>
-                <p><span class="author">- Rumi</span></p>
-            </blockquote>
-            <blockquote1>
-                <p>PSYCHOLISTICA - profesjonalne wsparcie psychologiczne w drodze do lepszego zrozumienia siebie, odnalezienia harmonii i poprawy jakości życia.</p>
-            </blockquote1>
-        </div>
-        <div class="hero-image sun-ripple-surface">
-            <img src="sun.png" alt="Psychoterapia w Warszawie, Wawer">
-            <div class="sun-ripples" aria-hidden="true"></div>
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="hero" id="top">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Psychoterapia · Warszawa Falenica / online</p>
+                    <h1>Przestrzeń, w której możesz <em>zrozumieć siebie</em> głębiej.</h1>
+                    <p class="hero-lead">Psychoterapia indywidualna i terapia par dla osób, które chcą odzyskać wewnętrzną równowagę, lepiej rozumieć swoje relacje i tworzyć trwałą zmianę.</p>
 
-    <section id="terapie" class="terapie-preview">
-        <h2></h2>
-        <div class="terapie-grid">
-            <a href="konsultacje.html" class="terapie-card">
-                <div class="card-media">
-                    <img src="Konsul.png" alt="Konsultacje psychologiczne" class="terapie-image">
+                    <div class="hero-actions">
+                        <a class="button" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów pierwszą konsultację</a>
+                        <a class="text-link" href="#podejscie">Poznaj moje podejście <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <ul class="hero-facts" aria-label="Najważniejsze informacje">
+                        <li><strong>20+</strong><span>lat doświadczenia</span></li>
+                        <li><strong>PL / EN</strong><span>dwa języki pracy</span></li>
+                        <li><strong>Online</strong><span>i w gabinecie</span></li>
+                    </ul>
                 </div>
-               
-                <p>Codzienne wyzwania, trudne relacje, skomplikowane więzi rodzinne, zmiany, natłok emocji, mogą być nadmiernie przytłaczające. Może masz w głowie chaos czy problem, z którym nie możesz sobie sam poradzić? A może rozważasz terapię? Dobrym rozwiązaniem będzie wówczas skorzystanie z profesjonalnego wsparcia psychologicznego.</p>
-                <span class="dots">...</span>
-            </a>
-            <a href="psychoterapia.html" class="terapie-card">
-                <div class="card-media">
-                    <img src="Psych.png" alt="Psychoterapia" class="terapie-image">
-                </div>
-                
-                <p>Psychoterapia jest dla każdego, kto chce głębiej zrozumieć swój wewnętrzny świat. To skuteczne wsparcie dla osób borykających się z różnymi problemami psychologicznymi, emocjonalnymi, relacyjnymi, czy też dylematami egzystencjalnymi. Proces terapeutyczny pomaga miarowo odkrywać i rozumieć źródła Twoich wewnętrznych konfliktów, nieświadomych mechanizmów i wzorców, które wpływają na Twoje myśli, uczucia i zachowania w życiu codziennym. </p>
-                <span class="dots">...</span>
-            </a>
-            <a href="konsultacje_par.html" class="terapie-card">
-                <div class="card-media">
-                    <img src="pary.png" alt="Konsultacje par" class="terapie-image" >
-                </div>
-               
-               
-                <p>Jeśli czujecie, że oddalacie się od siebie, rozmowy zbyt często zamieniają się w kłótnie, a kryzys zamiast przeminąć z wiatrem, rozgościł się między Wami na dobre - to dobry moment na wspólną pracę. Terapia par to skuteczna metoda profesjonalnego wsparcia psychoterapeutycznego w pokonywaniu kryzysów i trudności w relacji, a także w rozwijaniu jego potencjału.</p>
-                <span class="dots">...</span>
-            </a>
-            <a href="terapia_dda.html" class="terapie-card">
-                <div class="card-media">
-                    <img src="DDA.png" alt="Terapia DDA" class="terapie-image">
-                </div>
-               
-                <p>DDA - Dorosłe Dzieci Alkoholików - to termin używany dla osób, które dorastały w rodzinie z problemem uzależnienia.
-                   DDD - Dorosłe Dzieci z Dysfunkcyjnych Rodzin - to szersza kategoria, obejmująca osoby dorastające w rodzinach, gdzie występowały inne formy dysfunkcji (bez uzależnień).    Dorastanie w dysfunkcyjnej rodzinie pozostawia trwałe ślady na psychice i emocjach człowieka, powoduje długotrwały negatywny wpływ na jego funkcjonowaniu w życiu dorosłym.</p>
-                <span class="dots">...</span>
-            </a>
-            <a href="interwencja_kryzysowa.html" class="terapie-card">
-                <div class="card-media">
-                    <img src="Inter.png" alt="Interwencja kryzysowa" class="terapie-image">
-                </div>
-                
-                <p>To natychmiastowa pomoc psychologiczna w sytuacjach nagłych. Interwencja jest formą krótkoterminowego wsparcia psychologicznego skoncentrowana na problemie.</p>
-                <span class="dots">...</span>
-            </a>
-            <a href="holistic_healing.html" class="terapie-card">
-                <div class="card-media" style="position: relative; display: flex; align-items: center; justify-content: center;">
-                    <img src="program samorozwoju.png" alt="SPERSONALIZOWANY PROGRAM SAMOROZWOJU (SPS)" class="terapie-image">
-                </div>
-               
-                <p>Rozwój może przybierać różne formy – nie zawsze musi być to psychoterapia. Jeśli preferujesz samodzielną i systematyczną pracę, przygotuję dla Ciebie autorski Program Samorozwoju. </p>
-                <span class="dots">...</span>
-            </a>
-        </div>
-        <!-- <div class="terapie-more">
-            <a href="oferta.html" class="btn-more">Zobacz wszystkie terapie</a>
-        </div> -->
-    </section>
 
-    <section id="terapeuta" class="terapeuta">
-       
-        <div class="terapeuta-content">
-          
-            <img src="magdalena.jpg" alt="Magdalena Surya Zawadzka" class="terapeuta-image">
-            <div class="terapeuta-text">
-                <p><strong>mgr Magdalena Surya Zawadzka</strong></p>
+                <div class="hero-visual reveal" aria-label="Miejsce na przyszły portret terapeutki">
+                    <div class="hero-sun" aria-hidden="true"></div>
+                    <!-- PLACEHOLDER: zastąpić nową fotografią portretową w formacie 4:5 -->
+                    <div class="photo-placeholder photo-placeholder--hero" role="img" aria-label="Tutaj powinien znaleźć się nowy portret Magdaleny Surya Zawadzkiej">
+                        <span class="placeholder-index">01</span>
+                        <div>
+                            <span class="placeholder-label">Fotografia do dodania</span>
+                            <strong>Nowy portret<br>Magdaleny</strong>
+                            <small>Pion 4:5 · naturalne światło · spokojne, neutralne tło</small>
+                        </div>
+                    </div>
 
-  <p>
-        Psycholog. Psychoterapeutka. Terapeutka par.
-        Z ponad 20-letnim doświadczeniem, zapoczątkowanym w Instytucie Psychiatrii i Neurologii w Warszawie, wspiera pacjentów w procesie głębokiej i trwałej zmiany. W swojej praktyce PSYCHOLISTICA łączy solidny warsztat psychoanalityczny z elastycznością podejścia integracyjnego oraz holistycznym spojrzeniem na człowieka. Jej praca podlega regularnej superwizji, co gwarantuje najwyższe standardy etyczne i merytoryczne procesu terapeutycznego.
-    </p>
-
-    <p><strong>Kluczowe obszary praktyki</strong></p>
-
-    <p>
-        <li>Indywidualna praca z dorosłymi:
-        Skupia się na osobach mierzących się z kryzysami życiowymi, problemami emocjonalnymi, trudnościami w relacjach oraz skutkami bolesnych doświadczeń z przeszłości. Wspiera tych, którzy znaleźli się w impasie egzystencjalnym, towarzysząc im w procesie poszukiwania sensu, lepszego zrozumienia siebie i własnego miejsca w świecie.</li>
-    </p>
-
-    <p>
-       <li>Praca z parami:
-        Prowadzi terapię par, pomagając partnerom w odbudowie wzajemnego zrozumienia, poprawie komunikacji oraz przywracaniu harmonii w relacji, nawet po trudnych doświadczeniach.</li>
-    </p>
-
-    <p><strong>Unikatowa perspektywa</strong></p>
-
-    <p>
-        Wiedzę akademicką łączy z autentycznym, osobistym doświadczeniem w obszarach, które rzadko idą w parze:
-    </p>
-
-    <p>
-        <li>Perspektywa biznesowa:
-        Dzięki wieloletniej współpracy z międzynarodową kadrą zarządzającą (C-level), posiada osobiste doświadczenie funkcjonowania w środowisku wysokiej presji.</li>
-    </p>
-
-    <p>
-       <li>Podejście holistyczne:
-        Jako nauczycielka medytacji i jogi oraz certyfikowana (w Indiach) terapeutka metody Bio Dynamic Rebalancing, w procesie terapeutycznym uwzględnia nierozerwalny związek ciała i umysłu. Posiada bogate doświadczenie w różnorodnych holistycznych metodach samorozwoju oraz autoregulacji, opartych na zrozumieniu psychosomatyki i układu nerwowego.</li>
-    </p>
-
-    <p><strong>Wykształcenie i kwalifikacje</strong></p>
-    <p>
-        Jest absolwentką psychologii na Uniwersytecie Kardynała Stefana Wyszyńskiego w Warszawie (5-letnie studia jednolite).
-    </p>
-    <p>
-        Zrealizowała pełen program podyplomowego 4-letniego szkolenia z psychoterapii psychoanalitycznej (obejmujący terapię własną) w Instytucie Analizy Grupowej Rasztów, ośrodku akredytowanym przez europejskie organizacje EGATIN (European Group Analytic Training Institutions Network) i EFPP (European Federation for Psychoanalytic Psychotherapy), oraz atestowanego przez sekcje naukowe psychoterapii Polskiego Towarzystwa Psychologicznego i Polskiego Towarzystwa Psychiatrycznego.
-    </p>
-    <p>
-        Posiada specjalistyczne przygotowanie w zakresie psychologii sądowej oraz opiniowania biegłego sądowego. Ukończyła
-Studium Pomocy Psychologicznej dla Par w Instytucie Psychologii Zdrowia PTP.
-    </p>
-    <p>
-        Jest członkiem Polskiego Towarzystwa Psychologicznego (PTP).
-    </p>
-     <p>
-        Pracuje w języku polskim i angielskim.
-    </p>
-<p>Gościnnie dzieli się swoją wiedzą w programach telewizyjnych, radiowych i podcastach.</p>
-    <p><strong>PSYCHOLISTICA - zakres prowadzonej praktyki</strong></p>
-
-    <ul>
-        <li>Konsultacje psychologiczne.</li>
-        <li>Psychoterapia indywidualna.</li>
-        <li>Konsultacje i terapia par.</li>
-        <li>Terapia DDA/DDD.</li>
-        <li>Interwencja kryzysowa.</li>
-        <li>Psychoedukacja, warsztaty rozwojowe.</li>
-        <li>Poradnictwo z elementami mentoringu/coachingu.</li>
-        <li>Eksperckie konsultacje dla mediów i wydawnictw.</li>
-    </ul>
-     <p><strong>PSYCHOLISTICA - tu zaczyna się zmiana.</strong></p>
-                <ul>
-                    <li>Kameralny gabinet w Warszawie.</li>
-                    <li>Sesje stacjonarne i online.</li>
-                    <li>Sesje w języku polskim i angielskim.</li>
-                    <li>Sprawdź dostępne terminy - WhatsApp +48.881773369.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="kontakt" class="kontakt">
-        <div class="kontakt-content">
-            <div class="kontakt-info">
-                <p><strong>KONTAKT</strong></p>
-                <div class="address">
-                    <p>Warszawa - Falenica, Polska</p>
-                    <p><i class="fas fa-phone"></i> tel. +48.881773369</p>
-                    <p><i class="fas fa-phone"></i> magda@psycholistica.pl</p>
-                    
-                    <section class="social-media">
-                        <ul class="social-icons">
-                            <li><a href="https://www.facebook.com/psycholisticapl" target="_blank"><img src="facebook-50.png" alt="Facebook Logo"></a></li>
-                            <li><a href="https://www.instagram.com/psycholisticapl" target="_blank"><img src="instagram-50.png" alt="Instagram Logo"></a></li>
-                            <li><a href="https://wa.me/48881773369" target="_blank"><img src="whatsapp-50.png" alt="WhatsApp Logo"></a></li>
-                        </ul>
-                    </section>
+                    <blockquote class="hero-quote">
+                        <p>„Twoim zadaniem nie jest poszukiwanie miłości, a jedynie tych wszystkich barier w Tobie, które przed nią stworzyłeś.”</p>
+                        <cite>— Rumi</cite>
+                    </blockquote>
                 </div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.164283598708!2d21.217707!3d52.1671296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ed556aac0d0cb%3A0x96354f4b699e504b!2sPSYCHOLISTICA!5e0!3m2!1sen!2sus!4v1687440954321!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+
+        <section class="trust-strip" aria-label="Standard praktyki">
+            <div class="container trust-grid">
+                <div><span class="trust-number">01</span><p>Regularna superwizja</p></div>
+                <div><span class="trust-number">02</span><p>Członkini PTP</p></div>
+                <div><span class="trust-number">03</span><p>Podejście integracyjne</p></div>
+                <div><span class="trust-number">04</span><p>Warszawa i online</p></div>
+            </div>
+        </section>
+
+        <section class="manifesto section">
+            <div class="container manifesto-grid">
+                <p class="eyebrow reveal">Tu zaczyna się zmiana</p>
+                <div class="manifesto-copy reveal">
+                    <h2>Dobra terapia nie daje gotowych odpowiedzi. Pomaga usłyszeć <em>własne.</em></h2>
+                    <p>Tworzę bezpieczną, uważną przestrzeń do rozumienia emocji, powtarzających się wzorców i relacji. Pracujemy w tempie, które pozwala zmianie nie tylko się pojawić, lecz także pozostać z Tobą na dłużej.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="terapie">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Obszary pracy</p>
+                        <h2>Wsparcie dopasowane do momentu, w którym jesteś.</h2>
+                    </div>
+                    <p>Pierwsze spotkanie służy rozpoznaniu Twojej sytuacji i wybraniu formy pracy, która naprawdę odpowiada Twoim potrzebom.</p>
+                </div>
+
+                <div class="service-grid">
+                    <a class="service-card service-card--warm reveal" href="psychoterapia.html">
+                        <span class="service-number">01</span>
+                        <div>
+                            <p class="service-kicker">Dla dorosłych</p>
+                            <h3>Psychoterapia indywidualna</h3>
+                            <p>Głębsze rozumienie emocji, relacji i mechanizmów, które wpływają na codzienne wybory oraz poczucie własnego miejsca.</p>
+                        </div>
+                        <span class="card-link">Poznaj tę formę pracy <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="service-card reveal" href="konsultacje_par.html">
+                        <span class="service-number">02</span>
+                        <div>
+                            <p class="service-kicker">Dla par</p>
+                            <h3>Terapia par</h3>
+                            <p>Wsparcie w odbudowaniu dialogu, rozumieniu wzajemnych potrzeb i przechodzeniu przez kryzysy bez utraty bliskości.</p>
+                        </div>
+                        <span class="card-link">Poznaj tę formę pracy <span aria-hidden="true">↗</span></span>
+                    </a>
+
+                    <a class="service-card service-card--light reveal" href="konsultacje.html">
+                        <span class="service-number">03</span>
+                        <div>
+                            <p class="service-kicker">Pierwszy krok</p>
+                            <h3>Konsultacja psychologiczna</h3>
+                            <p>Spotkanie pomagające uporządkować sytuację, nazwać trudność i zdecydować, jaki rodzaj dalszego wsparcia będzie najlepszy.</p>
+                        </div>
+                        <span class="card-link">Poznaj tę formę pracy <span aria-hidden="true">↗</span></span>
+                    </a>
+                </div>
+
+                <div class="additional-services reveal">
+                    <p class="eyebrow">Pozostałe obszary</p>
+                    <div class="additional-links">
+                        <a href="terapia_dda.html"><span>Terapia DDA / DDD</span><span aria-hidden="true">→</span></a>
+                        <a href="interwencja_kryzysowa.html"><span>Interwencja kryzysowa</span><span aria-hidden="true">→</span></a>
+                        <a href="holistic_healing.html"><span>Program samorozwoju</span><span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="approach section" id="podejscie">
+            <div class="approach-orb" aria-hidden="true"></div>
+            <div class="container approach-grid">
+                <div class="approach-intro reveal">
+                    <p class="eyebrow eyebrow--light">Sposób pracy</p>
+                    <h2>Bez pośpiechu. Bez ocen. Z uważnością na całą historię.</h2>
+                    <p>Łączę solidny warsztat psychoanalityczny z elastycznością podejścia integracyjnego i holistycznym spojrzeniem na człowieka. Nie pracuję według jednego schematu — proces powstaje w relacji i odpowiada konkretnej osobie.</p>
+                    <a class="text-link text-link--light" href="#proces">Zobacz, jak zacząć <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="approach-list">
+                    <article class="approach-item reveal">
+                        <span>01</span>
+                        <div><h3>Rozumienie źródeł</h3><p>Przyglądamy się nie tylko temu, co dzieje się teraz, ale też temu, skąd biorą się utrwalone reakcje i wzorce.</p></div>
+                    </article>
+                    <article class="approach-item reveal">
+                        <span>02</span>
+                        <div><h3>Relacja i bezpieczeństwo</h3><p>Zmiana rozwija się w kontakcie opartym na zaufaniu, poufności, jasnych granicach i profesjonalnych standardach.</p></div>
+                    </article>
+                    <article class="approach-item reveal">
+                        <span>03</span>
+                        <div><h3>Ciało i umysł</h3><p>W procesie uwzględniam psychosomatykę, układ nerwowy i sposoby, w jakie doświadczenia zapisują się w ciele.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="therapist section" id="terapeuta">
+            <div class="container therapist-grid">
+                <div class="therapist-media reveal">
+                    <!-- PLACEHOLDER: zastąpić nowym portretem w gabinecie -->
+                    <div class="photo-placeholder photo-placeholder--portrait" role="img" aria-label="Tutaj powinno znaleźć się zdjęcie terapeutki w gabinecie">
+                        <span class="placeholder-index">02</span>
+                        <div>
+                            <span class="placeholder-label">Fotografia do dodania</span>
+                            <strong>Portret w gabinecie</strong>
+                            <small>Pion 3:4 · miękkie światło · widoczny fragment wnętrza</small>
+                        </div>
+                    </div>
+                    <p class="media-caption">Docelowa fotografia powinna budować bliskość, spokój i profesjonalne zaufanie.</p>
+                </div>
+
+                <div class="therapist-copy reveal">
+                    <p class="eyebrow">Terapeutka</p>
+                    <h2>mgr Magdalena<br>Surya Zawadzka</h2>
+                    <p class="therapist-role">Psycholog · Psychoterapeutka · Terapeutka par</p>
+                    <p class="therapist-lead">Od ponad 20 lat wspieram osoby dorosłe i pary w procesie głębokiej, trwałej zmiany — od kryzysu i emocjonalnego przeciążenia po potrzebę lepszego rozumienia siebie.</p>
+
+                    <div class="credential-grid">
+                        <div><strong>20+</strong><span>lat praktyki</span></div>
+                        <div><strong>PTP</strong><span>członkini towarzystwa</span></div>
+                        <div><strong>PL / EN</strong><span>języki sesji</span></div>
+                        <div><strong>C-level</strong><span>doświadczenie wysokiej presji</span></div>
+                    </div>
+
+                    <details class="credentials">
+                        <summary>Wykształcenie i kwalifikacje <span aria-hidden="true">+</span></summary>
+                        <div class="credentials-content">
+                            <p>Absolwentka psychologii na Uniwersytecie Kardynała Stefana Wyszyńskiego w Warszawie.</p>
+                            <p>Pełny, czteroletni program szkolenia z psychoterapii psychoanalitycznej w Instytucie Analizy Grupowej Rasztów, ośrodku akredytowanym przez EGATIN i EFPP.</p>
+                            <p>Specjalistyczne przygotowanie w zakresie psychologii sądowej oraz Studium Pomocy Psychologicznej dla Par w Instytucie Psychologii Zdrowia PTP.</p>
+                        </div>
+                    </details>
+                    <a class="text-link" href="omnie.html">Pełny profil i doświadczenie <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="process section" id="proces">
+            <div class="container">
+                <div class="section-heading section-heading--compact reveal">
+                    <div><p class="eyebrow">Pierwsze spotkanie</p><h2>Zmiana może zacząć się od jednej rozmowy.</h2></div>
+                </div>
+                <ol class="process-grid">
+                    <li class="reveal"><span>01</span><h3>Kontakt</h3><p>Napisz na WhatsApp lub zadzwoń. Krótko ustalimy temat spotkania oraz dogodną formę: stacjonarnie albo online.</p></li>
+                    <li class="reveal"><span>02</span><h3>Konsultacja</h3><p>Pierwsza rozmowa pozwala spokojnie przyjrzeć się sytuacji, potrzebom i temu, czego oczekujesz od wspólnej pracy.</p></li>
+                    <li class="reveal"><span>03</span><h3>Decyzja</h3><p>Wspólnie określamy najlepszy kierunek, częstotliwość spotkań i zasady, które zapewniają bezpieczny proces.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="office section">
+            <div class="container office-grid">
+                <!-- PLACEHOLDER: zastąpić szeroką fotografią gabinetu -->
+                <div class="photo-placeholder photo-placeholder--office reveal" role="img" aria-label="Tutaj powinno znaleźć się szerokie zdjęcie gabinetu Psycholistica">
+                    <span class="placeholder-index">03</span>
+                    <div>
+                        <span class="placeholder-label">Fotografia do dodania</span>
+                        <strong>Kameralny gabinet<br>w Warszawie</strong>
+                        <small>Poziom 16:10 · światło dzienne · fotel, faktury i detale wnętrza</small>
+                    </div>
+                </div>
+                <div class="office-copy reveal">
+                    <p class="eyebrow">Miejsce</p>
+                    <h2>Spokojna przestrzeń z dala od pośpiechu.</h2>
+                    <p>Gabinet mieści się w warszawskiej Falenicy. Spotkania są dostępne również online, dzięki czemu możesz wybrać formę, w której czujesz się najbardziej swobodnie.</p>
+                    <a class="text-link" href="kontakt.html">Adres i wskazówki dojazdu <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section">
+            <div class="container faq-grid">
+                <div class="faq-intro reveal"><p class="eyebrow">Najczęstsze pytania</p><h2>Zanim zdecydujesz się na kontakt.</h2></div>
+                <div class="faq-list reveal">
+                    <details><summary>Jak umówić pierwszą konsultację?<span aria-hidden="true">+</span></summary><p>Najprościej napisać na WhatsApp lub zadzwonić pod numer +48 881 773 369. Możesz również skontaktować się mailowo.</p></details>
+                    <details><summary>Czy sesje odbywają się online?<span aria-hidden="true">+</span></summary><p>Tak. Spotkania mogą odbywać się stacjonarnie w Warszawie–Falenicy albo online.</p></details>
+                    <details><summary>Czy prowadzona jest terapia par?<span aria-hidden="true">+</span></summary><p>Tak. Praca z parami obejmuje między innymi trudności w komunikacji, kryzysy, oddalenie i odbudowywanie wzajemnego zrozumienia.</p></details>
+                    <details><summary>W jakich językach mogą odbywać się sesje?<span aria-hidden="true">+</span></summary><p>Sesje prowadzone są w języku polskim oraz angielskim.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="kontakt">
+            <div class="container">
+                <div class="contact-panel reveal">
+                    <div class="contact-copy">
+                        <p class="eyebrow eyebrow--light">Kontakt</p>
+                        <h2>Jeśli czujesz, że to dobry moment — porozmawiajmy.</h2>
+                        <p>Napisz kilka słów o tym, jakiego wsparcia szukasz. Odpowiem z informacją o dostępnych terminach.</p>
+                        <div class="contact-actions">
+                            <a class="button button--light" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Napisz na WhatsApp</a>
+                            <a class="text-link text-link--light" href="mailto:magda@psycholistica.pl">Wyślij e-mail <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                    <address class="contact-details">
+                        <div><span>Telefon</span><a href="tel:+48881773369">+48 881 773 369</a></div>
+                        <div><span>E-mail</span><a href="mailto:magda@psycholistica.pl">magda@psycholistica.pl</a></div>
+                        <div><span>Gabinet</span><p>Warszawa — Falenica<br>oraz spotkania online</p></div>
+                    </address>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <a class="brand brand--footer" href="#top" aria-label="Psycholistica — wróć na górę"><img src="logo.png" alt="Psycholistica"></a>
+            <p>Psychoterapia indywidualna i terapia par<br>Warszawa Falenica · online · PL / EN</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 PSYCHOLISTICA. Wszystkie prawa zastrzeżone.</p>
-            <p class="footer-small">Prywatność: Nie zbieramy ani nie przetwarzamy żadnych danych osobowych użytkowników. Witryna wykorzystuje jedynie podstawowe, techniczne pliki cookies niezbędne do jej prawidłowego wyświetlania.</p>
+        <div class="container footer-bottom">
+            <p>© <span data-current-year>2026</span> Psycholistica. Wszystkie prawa zastrzeżone.</p>
+            <p>Prywatność: witryna wykorzystuje wyłącznie techniczne pliki cookies niezbędne do prawidłowego działania.</p>
         </div>
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>
