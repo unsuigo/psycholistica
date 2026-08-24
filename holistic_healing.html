@@ -1,85 +1,39 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <title>PROGRAM SAMOROZWOJU - PSYCHOLISTICA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ofertas_style.css">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f5efe7"><meta name="description" content="Indywidualny program samorozwoju przygotowany przez psychoterapeutkę. Materiały i narzędzia dopasowane do Twoich potrzeb, celów i tempa pracy.">
+    <title>Program samorozwoju — Psycholistica</title>
+    <link rel="icon" type="image/png" href="favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles_main.css"><link rel="stylesheet" href="styles_service.css"><script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
-    <header class="site-header">
-        <div class="logo-container">
-            <a href="index.html#top"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html#terapie" class="active">TERAPIE</a></li>
-                <li><a href="index.html#terapeuta">TERAPEUTA</a></li>
-                <li><a href="index.html#kontakt">KONTAKT</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="service-page service-page--growth">
+    <a class="skip-link" href="#main-content">Przejdź do treści</a><div class="ambient-orb" data-ambient-orb aria-hidden="true"></div>
+    <header class="site-header" data-header><div class="container header-inner"><a class="brand" href="index.html#top" aria-label="Psycholistica — strona główna"><span class="brand-symbol" aria-hidden="true"></span><span class="brand-wording"><span class="brand-name">Psycholistica</span><span class="brand-tagline">psychoterapia integracyjna</span></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Otwórz menu"><span></span><span></span></button><nav class="primary-navigation" id="primary-navigation" aria-label="Główna nawigacja"><a class="is-active" href="index.html#terapie">Terapie</a><a href="index.html#podejscie">Podejście</a><a href="index.html#terapeuta">Terapeutka</a><a href="index.html#proces">Jak zacząć</a><a href="index.html#kontakt">Kontakt</a><a href="polityka-prywatnosci.html">RODO</a></nav><a class="button button--small header-cta" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów konsultację</a></div></header>
 
-    <section class="hero">
-        <div class="hero-image-container">
-            <a href="index.html#terapie"><img src="program samorozwoju.png" alt="Program Samorozwoju" class="hero-image"></a>
-        </div>
-        <div class="hero-text">
-           <p>   </p>
-            <p>Rozwój może przybierać różne formy – nie zawsze musi być to psychoterapia. Jeśli preferujesz samodzielną i systematyczną pracę, przygotuję dla Ciebie autorski Program Samorozwoju. Żadnych szablonów. Otrzymasz zindywidualizowane materiały i narzędzia ściśle dostosowane do Twoich unikatowych potrzeb oraz celów, z którymi będziesz pracować we własnym tempie.</p>
-            
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="service-hero"><div class="container service-hero-grid">
+            <div class="service-hero-copy reveal"><a class="service-back" href="index.html#terapie"><span aria-hidden="true">←</span> Wszystkie terapie</a><p class="eyebrow">Program samorozwoju</p><h1>Rozwój we <em>własnym rytmie.</em></h1><p class="service-summary">Indywidualnie przygotowany kierunek samodzielnej pracy dla osób, które chcą rozwijać się systematycznie, korzystając z materiałów i narzędzi dopasowanych do swoich potrzeb.</p><ul class="service-tags" aria-label="Najważniejsze informacje"><li>Program indywidualny</li><li>Samodzielna praca</li><li>Własne tempo</li></ul><a class="button" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Zapytaj o program</a></div>
+            <div class="service-visual reveal" data-service-visual aria-label="Abstrakcyjna, interaktywna forma symbolizująca samodzielny rozwój"><div class="service-orb" data-service-orb aria-hidden="true"><span class="service-orb-grain"></span><span class="service-orb-label">Psycholistica · 06</span><p class="service-orb-copy">Materiały.<br>Praktyka.<br>Twój kierunek.</p></div></div>
+        </div></section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('nav ul li a');
-            var currentPath = window.location.pathname.split("/").pop();
+        <section class="service-intro section"><div class="container service-intro-grid reveal"><p class="eyebrow">Inna forma pracy</p><p class="service-intro-lead">Rozwój osobisty nie zawsze musi przyjmować formę psychoterapii. Jeśli wolisz pracować samodzielnie, a jednocześnie cenisz systematyczność i profesjonalnie przygotowany kierunek, indywidualny Program Samorozwoju może być właściwą formą.</p></div></section>
 
-            links.forEach(function(link) {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
+        <section class="service-content section"><div class="container service-content-grid">
+            <aside class="service-aside reveal" aria-label="Najważniejsze cechy programu"><p class="eyebrow">W praktyce</p><dl class="service-facts"><div><dt>Charakter</dt><dd>Indywidualny</dd></div><div><dt>Materiały</dt><dd>Bez gotowych szablonów</dd></div><div><dt>Tempo</dt><dd>Dopasowane do Ciebie</dd></div></dl></aside>
+            <article class="service-article">
+                <section class="service-block reveal"><span class="service-block-number">01</span><h2>Program przygotowany dla Ciebie</h2><p>Nie korzystamy z jednego, gotowego schematu. Terapeutka przygotowuje materiały i narzędzia w odniesieniu do Twoich potrzeb, celów oraz obszaru, nad którym chcesz pracować.</p></section>
+                <div class="service-feature-grid reveal">
+                    <article class="service-feature"><span>01</span><h3>Indywidualny</h3><p>Zakres programu wynika z Twojej sytuacji i celów, a nie z uniwersalnego szablonu.</p></article>
+                    <article class="service-feature"><span>02</span><h3>Systematyczny</h3><p>Materiały tworzą uporządkowany kierunek samodzielnej pracy.</p></article>
+                    <article class="service-feature"><span>03</span><h3>Własne tempo</h3><p>Możesz korzystać z programu w rytmie dopasowanym do swoich możliwości.</p></article>
+                </div>
+                <section class="service-block reveal"><span class="service-block-number">02</span><h2>Jak powstaje program</h2><p>Punktem wyjścia jest rozmowa o tym, czego potrzebujesz i jaki cel chcesz osiągnąć. Na tej podstawie powstaje zestaw dopasowanych materiałów i narzędzi do samodzielnej pracy.</p><blockquote class="service-callout">To propozycja dla osób, którym bliżej do samodzielnej, konsekwentnej pracy niż do regularnego procesu psychoterapii.</blockquote></section>
+            </article>
+        </div></section>
 
-                link.addEventListener('click', function() {
-                    links.forEach(function(link) {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                });
-            });
-        });
+        <section class="service-next"><div class="container service-next-grid reveal"><div><p class="eyebrow">Pierwszy krok</p><h2>Sprawdź, czy ta forma pracy odpowiada Twoim potrzebom.</h2></div><div class="service-next-actions"><a class="button" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Zapytaj o program</a><a class="text-link" href="index.html#terapie">Wszystkie terapie <span aria-hidden="true">→</span></a></div></div></section>
+    </main>
 
-        // Smart header: hide on scroll down, show on scroll up
-        (function () {
-            const header = document.querySelector('.site-header');
-            if (!header) return;
-
-            const THRESH = 80;
-            let lastY = window.scrollY;
-            let ticking = false;
-
-            function onScroll() {
-                const y = window.scrollY;
-                // тень/фон после порога
-                if (y > THRESH) header.classList.add('header--scrolled');
-                else header.classList.remove('header--scrolled');
-
-                // спрятать при скролле вниз, показать при скролле вверх
-                if (Math.abs(y - lastY) > 5) {
-                    if (y > lastY && y > THRESH) header.classList.add('header--hidden');
-                    else header.classList.remove('header--hidden');
-                    lastY = y;
-                }
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', () => {
-                if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
-            }, { passive: true });
-        })();
-    </script>
+    <footer class="site-footer"><div class="container footer-main"><a class="brand brand--footer" href="index.html#top" aria-label="Psycholistica — strona główna"><span class="brand-symbol" aria-hidden="true"></span><span class="brand-wording"><span class="brand-name">Psycholistica</span><span class="brand-tagline">psychoterapia integracyjna</span></span></a><p>Psychoterapia indywidualna i terapia par<br>Warszawa Falenica · online · PL / EN</p><div class="footer-social"><a href="https://www.instagram.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="container footer-bottom"><p>© <span data-current-year>2026</span> Psycholistica. Wszystkie prawa zastrzeżone.</p><p><a class="footer-legal-link" href="polityka-prywatnosci.html">Polityka prywatności i RODO</a> · Bez cookies analitycznych i marketingowych.</p></div></footer>
+    <script src="main.js"></script>
 </body>
 </html>

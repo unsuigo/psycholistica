@@ -3,63 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5efe7">
+    <meta name="description" content="Psychoterapia indywidualna dla dorosłych w Warszawie–Falenicy i online. Bezpieczna przestrzeń do lepszego rozumienia siebie, emocji i relacji.">
+    <title>Psychoterapia indywidualna — Psycholistica</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Psychoterapia - PSYCHOLISTICA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ofertas_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_main.css">
+    <link rel="stylesheet" href="styles_service.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <a href="oferta.html"><img src="logo.png" alt="PSYCHOLISTICA Logo" class="logo"></a>
+<body class="service-page">
+    <a class="skip-link" href="#main-content">Przejdź do treści</a>
+    <div class="ambient-orb" data-ambient-orb aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+        <div class="container header-inner">
+            <a class="brand" href="index.html#top" aria-label="Psycholistica — strona główna">
+                <span class="brand-symbol" aria-hidden="true"></span>
+                <span class="brand-wording"><span class="brand-name">Psycholistica</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Otwórz menu"><span></span><span></span></button>
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Główna nawigacja">
+                <a class="is-active" href="index.html#terapie">Terapie</a><a href="index.html#podejscie">Podejście</a><a href="index.html#terapeuta">Terapeutka</a><a href="index.html#proces">Jak zacząć</a><a href="index.html#kontakt">Kontakt</a><a href="polityka-prywatnosci.html">RODO</a>
+            </nav>
+            <a class="button button--small header-cta" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów konsultację</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html#terapie" class="active">TERAPIE</a></li>
-                <li><a href="omnie.html">TERAPEUTA</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-image-container">
-            <a href="index.html#terapie"><img src="Psych.png" alt="Psychoterapia" class="hero-image"></a>
-        </div>
-        <div class="hero-text">
-           
-            <p>Psychoterapia jest dla każdego, kto chce głębiej zrozumieć swój wewnętrzny świat. To skuteczne wsparcie dla osób borykających się z różnymi problemami psychologicznymi, emocjonalnymi, relacyjnymi, czy też dylematami egzystencjalnymi. Proces terapeutyczny pomaga miarowo odkrywać i rozumieć źródła Twoich wewnętrznych konfliktów, nieświadomych mechanizmów i wzorców, które wpływają na Twoje myśli, uczucia i zachowania w życiu codziennym.</p>
-            <p>W zależności od Twojej gotowości i potrzeb, psychoterapia może być procesem długoterminowym, ale nie musi. Niezależnie jednak od czasu trwania, proces zawsze wymaga z Twojej strony autentycznego zaangażowania i cierpliwości. Czego możesz się spodziewać:</p>
-            <ul>
-                <li>Omawiania bieżących trudności, poszerzania kontekstu.</li>
-                <li>Eksploracji wczesnych doświadczeń i ich wpływu na Twoje obecne funkcjonowanie.</li>
-                <li>Pracy nad zrozumieniem swoich uczuć i motywacji, uczenia się jak je regulować i wyrażać w zdrowy sposób.</li>
-                <li>Rozpoznania swoich schematów obronnych i oceny czy są one pomocne, czy szkodliwe. Wzmocnienia tego co zdrowe, zdefiniowania nowych kierunków.</li>
-                <li>Poprawy relacji z innymi, ewentualnego wyjścia z toksycznych układów. Terapia pomoże Ci w zrozumieniu wzorców interakcji z innymi ludźmi i może Cię nauczyć bardziej konstruktywnych sposobów komunikowania się i budowania relacji.</li>
-                <li>Zwiększenia samoświadomości. W miarę postępów w terapii będziesz miał coraz lepsze rozumienie siebie, swoich wartości, potrzeb i pragnień, oraz zasobów.</li>
-            </ul>
-			<p>Przed rozpoczęciem psychoterapii odbywamy kilka spotkań konsultacyjnych, mających na celu wzajemne poznanie się, określenie Twoich potrzeb i oczekiwań, oraz ustalenie celów terapii. Sesje terapeutyczne odbywają się regularnie, minimum 1x w tygodniu o stałej porze, w kameralnym gabinecie w Warszawie lub on-line. Terapia wymaga Twojego stałego zaangażowania – zarówno mentalnego, czasowego, jak i finansowego.</p>
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="service-hero">
+            <div class="container service-hero-grid">
+                <div class="service-hero-copy reveal">
+                    <a class="service-back" href="index.html#terapie"><span aria-hidden="true">←</span> Wszystkie terapie</a>
+                    <p class="eyebrow">Psychoterapia indywidualna</p>
+                    <h1>Głębiej rozumieć <em>siebie.</em></h1>
+                    <p class="service-summary">Psychoterapia może pomóc lepiej zrozumieć własne przeżycia, powtarzające się schematy i sposób budowania relacji — a następnie tworzyć zmianę, która pozostaje na dłużej.</p>
+                    <ul class="service-tags" aria-label="Najważniejsze informacje"><li>Dorośli</li><li>Warszawa / online</li><li>Regularne spotkania</li></ul>
+                    <a class="button" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów pierwszą konsultację</a>
+                </div>
+                <div class="service-visual reveal" data-service-visual aria-label="Abstrakcyjna, interaktywna forma symbolizująca proces psychoterapii">
+                    <div class="service-orb" data-service-orb aria-hidden="true"><span class="service-orb-grain"></span><span class="service-orb-label">Psycholistica · 01</span><p class="service-orb-copy">Zrozumienie.<br>Zmiana.<br>Relacja.</p></div>
+                </div>
+            </div>
+        </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('nav ul li a');
-            var currentPath = window.location.pathname.split("/").pop();
+        <section class="service-intro section">
+            <div class="container service-intro-grid reveal"><p class="eyebrow">O tej formie pracy</p><p class="service-intro-lead">Psychoterapia to przestrzeń, w której możesz głębiej zrozumieć siebie, swoje emocje i relacje. W zależności od Twoich potrzeb praca może skupiać się na bieżących trudnościach albo sięgać do wcześniejszych doświadczeń, które wpływają na codzienne życie.</p></div>
+        </section>
 
-            links.forEach(function(link) {
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('active');
-                }
+        <section class="service-content section">
+            <div class="container service-content-grid">
+                <aside class="service-aside reveal" aria-label="Organizacja spotkań"><p class="eyebrow">W praktyce</p><dl class="service-facts"><div><dt>Dla kogo</dt><dd>Dla dorosłych</dd></div><div><dt>Częstotliwość</dt><dd>Minimum raz w tygodniu</dd></div><div><dt>Forma</dt><dd>Gabinet lub online</dd></div></dl></aside>
+                <article class="service-article">
+                    <section class="service-block reveal">
+                        <span class="service-block-number">01</span><h2>Czego możesz się spodziewać</h2>
+                        <ul class="service-list"><li>Omawiania bieżących trudności i sytuacji, które wpływają na Twoje samopoczucie.</li><li>Eksploracji wczesnych doświadczeń oraz ich znaczenia dla obecnego życia.</li><li>Pracy nad rozumieniem własnych uczuć, potrzeb i reakcji.</li><li>Rozpoznawania schematów obronnych, które kiedyś pomagały, a dziś mogą ograniczać.</li><li>Przyglądania się relacjom i budowania bardziej satysfakcjonujących więzi.</li><li>Zwiększania samoświadomości i zdolności do dokonywania trwałych zmian.</li></ul>
+                    </section>
+                    <section class="service-block reveal">
+                        <span class="service-block-number">02</span><h2>Jak zaczynamy</h2>
+                        <p>Przed rozpoczęciem psychoterapii odbywa się kilka konsultacji. Pozwalają one przyjrzeć się Twojej sytuacji, potrzebom i oczekiwaniom oraz wspólnie zdecydować o najlepszej formie dalszej pracy.</p>
+                        <p>Sesje psychoterapii odbywają się minimum raz w tygodniu, o stałej porze, w gabinecie w Warszawie–Falenicy albo online. Regularność i zaangażowanie tworzą bezpieczne ramy procesu.</p>
+                    </section>
+                </article>
+            </div>
+        </section>
 
-                link.addEventListener('click', function() {
-                    links.forEach(function(link) {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
+        <section class="service-next"><div class="container service-next-grid reveal"><div><p class="eyebrow">Pierwszy krok</p><h2>Pierwsza rozmowa nie zobowiązuje do całego procesu.</h2></div><div class="service-next-actions"><a class="button" href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">Umów konsultację</a><a class="text-link" href="index.html#terapie">Wszystkie terapie <span aria-hidden="true">→</span></a></div></div></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main"><a class="brand brand--footer" href="index.html#top" aria-label="Psycholistica — strona główna"><span class="brand-symbol" aria-hidden="true"></span><span class="brand-wording"><span class="brand-name">Psycholistica</span></span></a><p>Psychoterapia indywidualna i terapia par<br>Warszawa Falenica · online · PL / EN</p><div class="footer-social"><a href="https://www.instagram.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/psycholisticapl" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://wa.me/48881773369" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div>
+        <div class="container footer-bottom"><p>© <span data-current-year>2026</span> Psycholistica. Wszystkie prawa zastrzeżone.</p><p><a class="footer-legal-link" href="polityka-prywatnosci.html">Polityka prywatności i RODO</a> · Bez cookies analitycznych i marketingowych.</p></div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
