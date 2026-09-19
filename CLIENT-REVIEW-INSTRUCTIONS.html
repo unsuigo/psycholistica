@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Instrukcja obsługi trybu uwag — Psycholistica</title>
+    <style>
+        :root { color-scheme: light; font-family: Arial, sans-serif; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #f3f1ee; color: #28221f; }
+        main { width: min(860px, calc(100% - 36px)); margin: 48px auto; padding: clamp(28px, 6vw, 58px); border: 1px solid #ddd7d1; border-radius: 28px; background: #fff; box-shadow: 0 24px 80px rgba(40, 34, 31, .08); }
+        .eyebrow { margin: 0 0 16px; color: #8a5b48; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+        h1 { max-width: 620px; margin: 0 0 18px; font-family: Georgia, serif; font-size: clamp(36px, 7vw, 56px); font-weight: 500; line-height: 1.03; }
+        .lead { max-width: 700px; margin: 0 0 34px; color: #6e655f; font-size: 17px; line-height: 1.7; }
+        h2 { margin: 42px 0 16px; font-family: Georgia, serif; font-size: clamp(25px, 4vw, 34px); font-weight: 500; }
+        ol { margin: 0; padding: 0; list-style: none; counter-reset: steps; }
+        li { position: relative; min-height: 58px; padding: 18px 0 18px 58px; border-top: 1px solid #e8e3de; line-height: 1.55; counter-increment: steps; }
+        li::before { position: absolute; top: 14px; left: 0; display: grid; width: 34px; height: 34px; border-radius: 50%; background: #f1dfd5; color: #714838; content: counter(steps, decimal-leading-zero); font-size: 11px; font-weight: 700; place-items: center; }
+        .note { margin: 30px 0 0; padding: 22px; border-radius: 18px; background: #f7f4f0; color: #625852; line-height: 1.6; }
+        .note strong { color: #28221f; }
+        .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+        .tool { padding: 17px 18px; border: 1px solid #e8e3de; border-radius: 16px; background: #fbfaf8; color: #625852; line-height: 1.5; }
+        .tool strong { display: block; margin-bottom: 4px; color: #28221f; }
+        .send-list { margin: 0; padding: 0; list-style: none; }
+        .send-list li { min-height: 0; padding-left: 36px; }
+        .send-list li::before { top: 19px; width: 22px; height: 22px; background: #28221f; color: #fff; content: "✓"; font-size: 12px; }
+        .button { display: inline-flex; margin-top: 28px; padding: 15px 24px; border-radius: 999px; background: #28221f; color: #fff; font-weight: 700; text-decoration: none; }
+        code { padding: 2px 6px; border-radius: 5px; background: #ece7e2; font-family: Consolas, monospace; }
+        @media (max-width: 640px) { .tools { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <main>
+        <p class="eyebrow">Psycholistica · instrukcja dla klienta</p>
+        <h1>Jak sprawdzić stronę i przekazać uwagi</h1>
+        <p class="lead">Tryb uwag pozwala wskazać zmiany bezpośrednio na stronie. Nie trzeba niczego instalować ani logować się do żadnego programu.</p>
+
+        <h2>Rozpoczęcie pracy</h2>
+        <ol>
+            <li>Najpierw <strong>rozpakuj cały otrzymany folder ZIP</strong>. Nie otwieraj strony bezpośrednio wewnątrz archiwum.</li>
+            <li>W rozpakowanym folderze kliknij dwukrotnie plik <strong>index.html</strong>. Najlepiej użyj aktualnej wersji Chrome albo Edge.</li>
+            <li>Kliknij duży przycisk <strong>Rozpocznij edycję strony</strong>. Elementy możliwe do zmiany zostaną podświetlone.</li>
+            <li>Możesz swobodnie przechodzić między podstronami. Twoje uwagi pozostaną zapisane w tej samej przeglądarce.</li>
+        </ol>
+
+        <h2>Do czego służą przyciski</h2>
+        <div class="tools">
+            <div class="tool"><strong>Wybierz</strong>Kliknij dowolny tekst, przycisk, zdjęcie, kartę albo sekcję, której dotyczy uwaga.</div>
+            <div class="tool"><strong>Edytuj tekst</strong>Zaznacz tekst, wpisz nową wersję i zapisz. Oryginalny tekst nie zostanie utracony.</div>
+            <div class="tool"><strong>Komentarz</strong>Opisz zmianę dotyczącą koloru, rozmiaru, odstępów, układu, animacji lub usunięcia elementu.</div>
+            <div class="tool"><strong>Zmień zdjęcie</strong>Wybierz nowe zdjęcie z komputera i zobacz jego podgląd bezpośrednio na stronie.</div>
+            <div class="tool"><strong>Cofnij</strong>Cofnij ostatnią przypadkową zmianę.</div>
+            <div class="tool"><strong>Lista uwag</strong>Zobacz wszystkie zmiany i komentarze. Z listy możesz przejść do wskazanego elementu, poprawić go albo usunąć uwagę.</div>
+            <div class="tool"><strong>Podgląd bez UI</strong>Tymczasowo ukryj narzędzia i zobacz stronę bez oznaczeń. Naciśnij <code>Esc</code>, aby wrócić.</div>
+            <div class="tool"><strong>Zakończ i zapisz</strong>Zapisz plik ze wszystkimi zmianami bezpośrednio w rozpakowanym folderze strony.</div>
+        </div>
+
+        <div class="note"><strong>Dyktowanie komentarza:</strong> kliknij pole komentarza i naciśnij <code>Win + H</code>. Następnie możesz podyktować treść za pomocą funkcji pisania głosowego w Windows.</div>
+
+        <h2>Zmiana zdjęcia</h2>
+        <ol>
+            <li>Wybierz przycisk <strong>Zmień zdjęcie</strong>, a następnie kliknij zdjęcie na stronie.</li>
+            <li>Wskaż nowy plik na swoim komputerze. Na stronie pojawi się jego podgląd.</li>
+            <li>Nie usuwaj ani nie zmieniaj nazwy wybranego pliku. Samo zdjęcie nie zostanie dołączone do pliku JSON.</li>
+        </ol>
+
+        <h2>Zakończenie przeglądu</h2>
+        <ol>
+            <li>Otwórz <strong>Listę uwag</strong> i sprawdź, czy wszystkie komentarze oraz zmiany tekstu są zapisane.</li>
+            <li>Kliknij <strong>Zakończ i zapisz</strong>, a następnie <strong>Zapisz zmiany w folderze strony</strong>.</li>
+            <li>Wskaż rozpakowany folder zawierający plik <strong>index.html</strong>. Zostanie w nim zapisany plik <strong>CLIENT-REVIEW-DATA.json</strong>.</li>
+            <li>Zamknij stronę, spakuj ponownie cały folder i odeślij ZIP.</li>
+        </ol>
+
+        <h2>Co należy wysłać</h2>
+        <ul class="send-list">
+            <li>ponownie spakowany folder strony zawierający plik <strong>CLIENT-REVIEW-DATA.json</strong>;</li>
+            <li>wszystkie nowe zdjęcia — w folderze <strong>NOWE-ZDJECIA</strong>.</li>
+        </ul>
+
+        <div class="note"><strong>Ważne:</strong> przed zamknięciem karty zawsze kliknij <strong>Zakończ i zapisz</strong>. Nie trzeba używać <code>Ctrl + S</code> ani samodzielnie edytować plików strony.</div>
+        <a class="button" href="index.html">Otwórz stronę do edycji</a>
+    </main>
+</body>
+</html>

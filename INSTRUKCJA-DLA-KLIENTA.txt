@@ -1,0 +1,47 @@
+PSYCHOLISTICA — INSTRUKCJA WPROWADZANIA ZMIAN
+
+1. Rozpakuj cały otrzymany plik ZIP do zwykłego folderu na komputerze.
+   Nie otwieraj plików bezpośrednio wewnątrz ZIP-a.
+
+2. W rozpakowanym folderze kliknij dwukrotnie plik index.html.
+   Otwórz go w aktualnej wersji Google Chrome albo Microsoft Edge.
+
+3. Na środku strony zobaczysz duży przycisk:
+   „Rozpocznij edycję strony”.
+   Kliknij go.
+
+4. Elementy, które można zmienić, zostaną podświetlone.
+   Kliknij wybrany tekst, zdjęcie, przycisk albo fragment strony.
+
+5. W panelu możesz:
+   - wpisać nową wersję tekstu;
+   - dodać komentarz dotyczący koloru, rozmiaru, odstępów lub układu;
+   - wskazać nowe zdjęcie;
+   - cofnąć przypadkową zmianę;
+   - otworzyć listę wszystkich zapisanych uwag.
+
+6. Aby podyktować komentarz w Windows, kliknij pole komentarza
+   i naciśnij Win + H.
+
+7. Możesz przechodzić między podstronami. Wprowadzone uwagi pozostaną zapisane.
+
+8. Po zakończeniu kliknij niebieski przycisk „Zakończ i zapisz”.
+
+9. Następnie kliknij „Zapisz zmiany w folderze strony” i wskaż ten sam
+   rozpakowany folder, w którym znajduje się plik index.html.
+   W folderze zostanie utworzony plik CLIENT-REVIEW-DATA.json.
+
+10. Zamknij stronę, spakuj ponownie cały folder do ZIP-a i odeślij go.
+
+JEŻELI PRZYCISK ZAPISU DO FOLDERU NIE JEST DOSTĘPNY:
+
+Kliknij „Pobierz sam plik zmian”. Następnie przenieś pobrany plik
+CLIENT-REVIEW-DATA.json do rozpakowanego folderu Psycholistica,
+spakuj cały folder i odeślij ZIP.
+
+NOWE ZDJĘCIA:
+
+Jeżeli nowe zdjęcie nie zostało automatycznie zapisane w folderze
+NOWE-ZDJECIA, skopiuj je tam ręcznie przed utworzeniem ZIP-a.
+
+Nie trzeba używać Ctrl + S ani samodzielnie edytować plików HTML.

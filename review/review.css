@@ -1,0 +1,804 @@
+:root {
+    --review-ink: #191c20;
+    --review-muted: #687079;
+    --review-line: #dce1e6;
+    --review-paper: #ffffff;
+    --review-soft: #f4f6f8;
+    --review-blue: #2563eb;
+    --review-blue-soft: #e8efff;
+    --review-amber: #f59e0b;
+    --review-danger: #c0362c;
+    --review-shadow: 0 18px 55px rgba(18, 25, 35, 0.2);
+}
+
+html.client-review-active {
+    scroll-padding-top: 92px;
+}
+
+#psych-review-root,
+#psych-review-root *,
+#psych-review-clean-hint {
+    box-sizing: border-box;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+#psych-review-root {
+    position: relative;
+    z-index: 2147483000;
+    color: var(--review-ink);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+#psych-review-root [hidden] {
+    display: none !important;
+}
+
+.psych-review-start {
+    position: fixed;
+    z-index: 2147483015;
+    inset: 0;
+    display: grid;
+    padding: 24px;
+    background: rgba(17, 20, 24, 0.68);
+    backdrop-filter: blur(8px);
+    place-items: center;
+}
+
+.psych-review-start-card {
+    width: min(590px, 100%);
+    padding: clamp(30px, 5vw, 50px);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 34px 100px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.psych-review-start-badge {
+    display: inline-flex;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--review-blue-soft);
+    color: #1746a2;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.psych-review-start-card h1 {
+    margin: 20px 0 14px;
+    color: var(--review-ink);
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 750;
+    line-height: 1.06;
+}
+
+.psych-review-start-card p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--review-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.psych-review-start-card small {
+    display: block;
+    margin-top: 14px;
+    color: #8a9199;
+    font-size: 10px;
+}
+
+.psych-review-start-button {
+    display: inline-flex;
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 15px 27px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--review-blue);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.28);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.psych-review-start-button:hover {
+    background: #1749bd;
+    transform: translateY(-1px);
+}
+
+.psych-review-toolbar {
+    position: fixed;
+    z-index: 2147483003;
+    top: 12px;
+    left: 50%;
+    display: flex;
+    width: min(1180px, calc(100vw - 24px));
+    min-height: 58px;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 9px 8px 14px;
+    border: 1px solid rgba(212, 218, 224, 0.95);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--review-shadow);
+    backdrop-filter: blur(18px);
+    transform: translateX(-50%);
+}
+
+.psych-review-brand {
+    display: flex;
+    min-width: 130px;
+    align-items: center;
+    gap: 9px;
+    padding-right: 12px;
+    border-right: 1px solid var(--review-line);
+}
+
+.psych-review-toolbar-tip {
+    color: #52606d;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.psych-review-brand-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--review-blue);
+    box-shadow: 0 0 0 4px var(--review-blue-soft);
+}
+
+.psych-review-brand strong,
+.psych-review-brand small {
+    display: block;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.psych-review-brand strong {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.psych-review-brand small {
+    margin-top: 3px;
+    color: var(--review-muted);
+    font-size: 9px;
+}
+
+.psych-review-toolbar-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 4px;
+}
+
+.psych-review-toolbar-actions {
+    margin-left: auto;
+}
+
+.psych-review-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: 0;
+    background: transparent;
+    color: #424a53;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 650;
+    line-height: 1;
+    white-space: nowrap;
+    transition: border-color 0.16s ease, background 0.16s ease, color 0.16s ease, transform 0.16s ease;
+}
+
+.psych-review-button:hover {
+    background: var(--review-soft);
+    color: var(--review-ink);
+}
+
+.psych-review-button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.psych-review-button.is-active {
+    border-color: #cbd8fb;
+    background: var(--review-blue-soft);
+    color: #1746a2;
+}
+
+.psych-review-button--primary {
+    border-color: var(--review-blue);
+    background: var(--review-blue);
+    color: #fff;
+}
+
+.psych-review-button--primary:hover {
+    border-color: #1749bd;
+    background: #1749bd;
+    color: #fff;
+}
+
+.psych-review-button--danger {
+    color: var(--review-danger);
+}
+
+.psych-review-count {
+    display: inline-grid;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #e8ebef;
+    color: #3f4750;
+    font-size: 9px;
+    place-items: center;
+}
+
+.psych-review-context,
+.psych-review-list,
+.psych-review-finish {
+    position: fixed;
+    z-index: 2147483002;
+    top: 82px;
+    right: 12px;
+    width: min(390px, calc(100vw - 24px));
+    max-height: calc(100vh - 94px);
+    overflow: auto;
+    border: 1px solid var(--review-line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--review-shadow);
+    overscroll-behavior: contain;
+}
+
+.psych-review-context[hidden],
+.psych-review-list[hidden],
+.psych-review-finish[hidden] {
+    display: none;
+}
+
+.psych-review-finish {
+    top: 82px;
+    left: 50%;
+    right: auto;
+    width: min(560px, calc(100vw - 24px));
+    transform: translateX(-50%);
+}
+
+.psych-review-finish-body {
+    padding: 20px;
+}
+
+.psych-review-finish-body > p {
+    margin: 0 0 16px;
+    color: #515961;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.psych-review-finish-body code {
+    padding: 2px 5px;
+    border-radius: 5px;
+    background: var(--review-soft);
+    color: #253044;
+    font-family: Consolas, monospace;
+    font-size: 11px;
+}
+
+.psych-review-finish-primary,
+.psych-review-finish-secondary {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+    padding: 12px 16px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.psych-review-finish-primary {
+    border: 1px solid var(--review-blue);
+    background: var(--review-blue);
+    color: #fff;
+}
+
+.psych-review-finish-secondary {
+    border: 1px solid var(--review-line);
+    background: #fff;
+    color: #3f4750;
+}
+
+.psych-review-finish-help {
+    margin-top: 14px !important;
+    color: var(--review-muted) !important;
+    font-size: 10px !important;
+}
+
+.psych-review-finish-status {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #cfd8e3;
+    border-radius: 11px;
+    background: #f6f8fb;
+    color: #43505f;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.psych-review-finish-status.is-success {
+    border-color: #a9d6bc;
+    background: #eef9f2;
+    color: #235b3b;
+}
+
+.psych-review-finish-status.is-error {
+    border-color: #efc3c0;
+    background: #fff5f4;
+    color: #8b2e28;
+}
+
+.psych-review-panel-header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 18px 15px;
+    border-bottom: 1px solid var(--review-line);
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.psych-review-panel-header h2 {
+    margin: 0;
+    color: var(--review-ink);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.psych-review-panel-header p {
+    margin: 4px 0 0;
+    color: var(--review-muted);
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+.psych-review-icon-button {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    border: 1px solid var(--review-line);
+    border-radius: 9px;
+    background: #fff;
+    color: #4d555e;
+    cursor: pointer;
+    font-size: 17px;
+    place-items: center;
+}
+
+.psych-review-panel-body {
+    padding: 18px;
+}
+
+.psych-review-element-meta {
+    display: grid;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--review-soft);
+    grid-template-columns: 70px 1fr;
+    gap: 6px 10px;
+}
+
+.psych-review-element-meta dt,
+.psych-review-element-meta dd {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.psych-review-element-meta dt {
+    color: var(--review-muted);
+}
+
+.psych-review-element-meta dd {
+    overflow-wrap: anywhere;
+    color: #333a42;
+    font-weight: 650;
+}
+
+.psych-review-fieldset {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+}
+
+.psych-review-fieldset[hidden] {
+    display: none;
+}
+
+.psych-review-legend {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 9px;
+    color: var(--review-ink);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.psych-review-help {
+    margin: -3px 0 10px;
+    color: var(--review-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.psych-review-input,
+.psych-review-select,
+.psych-review-textarea {
+    width: 100%;
+    border: 1px solid #cfd5db;
+    border-radius: 10px;
+    outline: 0;
+    background: #fff;
+    color: var(--review-ink);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.psych-review-input,
+.psych-review-select {
+    min-height: 40px;
+    padding: 8px 11px;
+}
+
+.psych-review-textarea {
+    min-height: 104px;
+    padding: 10px 11px;
+    resize: vertical;
+}
+
+.psych-review-input:focus,
+.psych-review-select:focus,
+.psych-review-textarea:focus {
+    border-color: var(--review-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.psych-review-inline-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    margin-top: 9px;
+}
+
+.psych-review-inline-actions .psych-review-button {
+    border-color: var(--review-line);
+    background: #fff;
+}
+
+.psych-review-inline-actions .psych-review-button--save {
+    border-color: #242a31;
+    background: #242a31;
+    color: #fff;
+}
+
+.psych-review-file {
+    width: 100%;
+    padding: 12px;
+    border: 1px dashed #b9c2cc;
+    border-radius: 11px;
+    background: var(--review-soft);
+    color: #3f4750;
+    font-size: 11px;
+}
+
+.psych-review-image-file {
+    margin: 8px 0 0;
+    color: #3158a4;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.psych-review-voice-note {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    color: var(--review-muted);
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.psych-review-list-summary {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--review-line);
+    color: var(--review-muted);
+    font-size: 11px;
+}
+
+.psych-review-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.psych-review-empty {
+    padding: 42px 24px;
+    color: var(--review-muted);
+    text-align: center;
+}
+
+.psych-review-item {
+    display: grid;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--review-line);
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+}
+
+.psych-review-item-number {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--review-blue-soft);
+    color: #2450a6;
+    font-size: 9px;
+    font-weight: 750;
+    place-items: center;
+}
+
+.psych-review-item h3 {
+    margin: 0;
+    color: var(--review-ink);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.psych-review-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 7px;
+    color: var(--review-muted);
+    font-size: 9px;
+}
+
+.psych-review-item-copy {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    color: #515961;
+    font-size: 11px;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.psych-review-item-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.psych-review-item-actions button {
+    padding: 5px 7px;
+    border: 1px solid var(--review-line);
+    border-radius: 7px;
+    background: #fff;
+    color: #4d555e;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 650;
+}
+
+.psych-review-clear {
+    padding: 16px 18px;
+}
+
+.psych-review-clear .psych-review-button {
+    width: 100%;
+    border-color: #efcbc8;
+    background: #fff7f6;
+    color: var(--review-danger);
+}
+
+.psych-review-toast {
+    position: fixed;
+    z-index: 2147483005;
+    bottom: 18px;
+    left: 50%;
+    max-width: min(520px, calc(100vw - 32px));
+    padding: 11px 16px;
+    border-radius: 10px;
+    background: #20252b;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
+    color: #fff;
+    font-size: 11px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 12px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.psych-review-toast.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.psych-review-markers {
+    position: fixed;
+    z-index: 2147482998;
+    inset: 0;
+    pointer-events: none;
+}
+
+.psych-review-marker {
+    position: absolute;
+    display: grid;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--review-amber);
+    box-shadow: 0 3px 10px rgba(72, 48, 5, 0.32);
+    color: #2f2208;
+    font-size: 9px;
+    font-weight: 800;
+    place-items: center;
+}
+
+[data-review-id].psych-review-hovered {
+    outline: 2px dashed rgba(37, 99, 235, 0.75) !important;
+    outline-offset: 3px !important;
+    cursor: crosshair !important;
+}
+
+html.psych-review-session-started [data-review-id].psych-review-editable:not(.psych-review-selected):not(.psych-review-changed) {
+    outline: 1px dashed rgba(37, 99, 235, 0.42);
+    outline-offset: 3px;
+}
+
+[data-review-id].psych-review-selected {
+    outline: 3px solid var(--review-blue) !important;
+    outline-offset: 4px !important;
+}
+
+[data-review-id].psych-review-changed:not(.psych-review-selected) {
+    outline: 2px dotted rgba(245, 158, 11, 0.78) !important;
+    outline-offset: 3px !important;
+}
+
+[data-review-id].psych-review-flash {
+    animation: psych-review-flash 1.25s ease;
+}
+
+.psych-review-image-preview {
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.psych-review-image-preview > * {
+    visibility: hidden !important;
+}
+
+#psych-review-clean-hint {
+    position: fixed;
+    z-index: 2147483010;
+    right: 16px;
+    bottom: 16px;
+    display: none;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(23, 27, 32, 0.9);
+    color: #fff;
+    font-size: 11px;
+    pointer-events: none;
+}
+
+html.psych-review-clean-preview #psych-review-root {
+    display: none !important;
+}
+
+html.psych-review-clean-preview [data-review-id].psych-review-hovered,
+html.psych-review-clean-preview [data-review-id].psych-review-selected,
+html.psych-review-clean-preview [data-review-id].psych-review-changed,
+html.psych-review-clean-preview [data-review-id].psych-review-editable {
+    outline: none !important;
+}
+
+html.psych-review-clean-preview #psych-review-clean-hint {
+    display: block;
+}
+
+@keyframes psych-review-flash {
+    0%, 100% { outline-color: var(--review-blue); }
+    50% { outline-color: var(--review-amber); outline-offset: 9px; }
+}
+
+@media (max-width: 980px) {
+    .psych-review-toolbar {
+        left: 8px;
+        width: calc(100vw - 16px);
+        overflow-x: auto;
+        transform: none;
+    }
+
+    .psych-review-brand {
+        min-width: 112px;
+    }
+
+    .psych-review-toolbar-actions {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 620px) {
+    .psych-review-toolbar {
+        top: 6px;
+        min-height: 52px;
+        border-radius: 13px;
+    }
+
+    .psych-review-button {
+        min-height: 34px;
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .psych-review-context,
+    .psych-review-list,
+    .psych-review-finish {
+        top: 66px;
+        right: 6px;
+        width: calc(100vw - 12px);
+        max-height: calc(100vh - 72px);
+    }
+
+    .psych-review-finish {
+        left: 6px;
+        right: auto;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #psych-review-root *,
+    [data-review-id] {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
