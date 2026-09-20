@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psycholistica — desktop preview</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family: Inter, system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #202124;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: 52px minmax(0, 1fr);
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-bottom: 1px solid #3b3d42;
+            background: #292b2f;
+            color: #f4f4f4;
+        }
+
+        .toolbar strong {
+            margin-right: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 7px 12px;
+            border: 1px solid #555860;
+            border-radius: 7px;
+            background: #35383e;
+            color: #f4f4f4;
+            cursor: pointer;
+            font: inherit;
+            font-size: 12px;
+        }
+
+        button[aria-pressed="true"] {
+            border-color: #ef8f38;
+            background: #75401f;
+        }
+
+        .status {
+            margin-left: auto;
+            color: #b8bbc2;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .stage {
+            position: relative;
+            display: grid;
+            min-width: 0;
+            min-height: 0;
+            place-items: center;
+            overflow: hidden;
+            padding: 18px;
+            background:
+                linear-gradient(45deg, #25272b 25%, transparent 25%),
+                linear-gradient(-45deg, #25272b 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #25272b 75%),
+                linear-gradient(-45deg, transparent 75%, #25272b 75%),
+                #202124;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+            background-size: 20px 20px;
+        }
+
+        .viewport {
+            position: relative;
+            box-shadow: 0 14px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            border: 0;
+            background: #fff;
+            transform-origin: top left;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                grid-template-rows: auto minmax(0, 1fr);
+            }
+
+            .toolbar {
+                flex-wrap: wrap;
+            }
+
+            .status {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar" aria-label="Настройки desktop-превью">
+        <strong>Desktop viewport</strong>
+        <button type="button" data-width="1920" data-height="1080" aria-pressed="true">1920 × 1080</button>
+        <button type="button" data-width="2560" data-height="1440" aria-pressed="false">2560 × 1440</button>
+        <span class="status" data-status></span>
+    </div>
+
+    <main class="stage" data-stage>
+        <div class="viewport" data-viewport>
+            <iframe src="index.html?v=20260920-contact-simple-r29" title="Psycholistica desktop preview"></iframe>
+        </div>
+    </main>
+
+    <script>
+        const stage = document.querySelector('[data-stage]');
+        const viewport = document.querySelector('[data-viewport]');
+        const frame = document.querySelector('iframe');
+        const status = document.querySelector('[data-status]');
+        const buttons = [...document.querySelectorAll('button[data-width]')];
+
+        let desktopWidth = 1920;
+        let desktopHeight = 1080;
+
+        function fitPreview() {
+            const availableWidth = Math.max(1, stage.clientWidth - 36);
+            const availableHeight = Math.max(1, stage.clientHeight - 36);
+            const scale = Math.min(availableWidth / desktopWidth, availableHeight / desktopHeight, 1);
+
+            frame.style.width = `${desktopWidth}px`;
+            frame.style.height = `${desktopHeight}px`;
+            frame.style.transform = `scale(${scale})`;
+            viewport.style.width = `${desktopWidth * scale}px`;
+            viewport.style.height = `${desktopHeight * scale}px`;
+            status.textContent = `${desktopWidth} × ${desktopHeight} · layout 100% · показ ${Math.round(scale * 100)}%`;
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                desktopWidth = Number(button.dataset.width);
+                desktopHeight = Number(button.dataset.height);
+                buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+                fitPreview();
+            });
+        });
+
+        new ResizeObserver(fitPreview).observe(stage);
+        fitPreview();
+    </script>
+</body>
+</html>
