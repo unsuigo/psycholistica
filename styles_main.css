@@ -1066,7 +1066,7 @@ h2 em {
         radial-gradient(circle at 68% 27%, rgba(255, 244, 202, 0.86), transparent 27%),
         linear-gradient(145deg, #f3b33f, #ef8050 60%, #d99a89);
     box-shadow: 24px 34px 100px rgba(189, 101, 71, 0.22);
-    opacity: 1;
+    opacity: 0.5;
     transform: translateX(-50%);
 }
 
@@ -1180,6 +1180,8 @@ h2 em {
     aspect-ratio: 1;
     border-radius: 50%;
     box-shadow: 0 28px 74px rgba(103, 76, 61, 0.18);
+    filter: sepia(1) saturate(0.72) contrast(0.92);
+    opacity: 0.8;
     object-fit: cover;
     object-position: 38% center;
 }
